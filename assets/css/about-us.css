@@ -149,6 +149,15 @@ header {
     color: #5c3d2e;
 }
 
+button.btn.btn-search {
+    color: white;
+    background-color: #a05a46;
+}
+button.btn.btn-search:hover {
+    color: black;
+    background-color: #a0594646;
+}
+
 /* Menú de navegación */
 .nav-links {
     text-align: center;
@@ -198,5 +207,50 @@ header {
     left: 0;
 }
 
+.navbar{
+    visibility: hidden;
+    /* background-color: #f8f4f0; */
+}
+@media screen and (max-width: 1100px){
+    .nav-links {
+        gap: 0;
+    }
+}
 
+@media screen and (max-width: 970px){
+    .nav-links a {
+        font-size: 16px;
+    }
+    
+    .nav-links a i {
+        font-size: 16px;
+    }
+    .category-button{
+        font-size: 11px;
+    }
+    .logo{
+        font-size: 16;
+    }
+}
 
+@media screen and (max-width: 890px){
+    .nav-links a {
+        font-size: 14px;
+    }
+    
+    .nav-links a i {
+        font-size: 14px;
+    }
+    .category-button{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 804px){
+    .navbar{
+        visibility: visible;
+    }
+    .menu-1, .menu-2{
+        visibility: hidden;
+    }
+}
