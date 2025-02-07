@@ -259,3 +259,134 @@ button.btn.btn-search:hover {
         visibility: hidden;
     }
 }
+
+
+/* CONTENIDO */
+
+.contenedor{
+    color: #56393c;
+}
+
+h2, h5, h3{
+    text-align: center;
+}
+
+.cards {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    width: 90%;
+}
+
+.card1, .card2, .card3 {
+    padding: 15px;
+    width: 30%;
+    padding: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1:hover, .card2:hover, .card3:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+img.card-img{
+    height: 170px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.our-team{
+    display: flex;
+    padding: 0px 50px 0px 50px;
+}
+
+.our-team p{
+    width: 25%;
+    padding: 20px;
+    font-size: 18px;
+}
+.our-team img{
+    margin: 10px 0px 30px 40px;
+    width: 75%;
+    height: 400px;
+    border-radius: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.our-team img:hover{
+    transform: scale(1.03); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4); 
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #5c3d2e;  
+    color: white; 
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    background-color: #5c3d2e;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-info {
+    background-color: #5c3d2e;  
+    width: 50%;
+    font-size: 16px;
+}
+
+.footer-info p, a.text-decoration-none.text-white.ancor{
+    background-color: #5c3d2e;  
+}
+
+
+.footer-social, .footer-contact {
+    background-color: #5c3d2e;  
+    width: 25%;
+    text-align: left;
+}
+
+.footer-social p, .footer-contact p {
+    background-color: #5c3d2e;  
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Íconos */
+.footer i {
+    background-color: #5c3d2e;  
+    font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info, .footer-social, .footer-contact {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-social p, .footer-contact p {
+        justify-content: center;
+    }
+}
