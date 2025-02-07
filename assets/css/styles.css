@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+*{
+    background-color: #f7f6ec;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f4f0;
 }
+
+/* MENU DE NAVEGACION RESPONSIVO, CON BOOTSTRAP*/
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #f6f1e8;
     color: #5c3d2e;
 }
 
@@ -67,6 +70,7 @@ header {
 
 .category-button i {
     font-size: 18px;
+    background-color: #5c3d2e;
 }
 
 .category-button:hover {
@@ -149,6 +153,15 @@ header {
     color: #5c3d2e;
 }
 
+button.btn.btn-search {
+    color: white;
+    background-color: #a05a46;
+}
+button.btn.btn-search:hover {
+    color: black;
+    background-color: #a0594646;
+}
+
 /* Menú de navegación */
 .nav-links {
     text-align: center;
@@ -198,7 +211,202 @@ header {
     left: 0;
 }
 
-.banner {
+.navbar{
+    visibility: hidden;
+}
+
+
+
+/* Botón de categorías */
+.category-button {
+    background-color: #5c3d2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.category-button i {
+    font-size: 18px;
+}
+
+.category-button:hover {
+    background-color: #a05a46;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: #fff;
+    border: 2px solid #5c3d2e;
+    border-radius: 10px;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #5c3d2e;
+    font-size: 16px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f6f1e8;
+}
+
+
+.search-bar {
+    margin: 10px 0px 20px 0px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    border: 2px solid #5c3d2e;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background-color: white;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 16px;
+    background: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #5c3d2e;
+}
+
+.nav-links {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    border-bottom: 3px solid #5c3d2e;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-align: center;
+    margin-left: 10px;
+    color: #5c3d2e;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.nav-links a i {
+    font-size: 18px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a05a46;
+    text-decoration: underline;
+}
+
+.nav-links a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #5c3d2e;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+} 
+
+/* MEDIA QUERYS */
+@media screen and (max-width: 1100px){
+    .nav-links {
+        gap: 0;
+    }
+}
+
+
+@media screen and (max-width: 970px){
+    .nav-links a {
+        font-size: 16px;
+    }
+    
+    .nav-links a i {
+        font-size: 16px;
+    }
+    .category-button{
+        font-size: 11px;
+    }
+    .logo{
+        font-size: 16;
+    }
+}
+
+@media screen and (max-width: 890px){
+    .nav-links a {
+        font-size: 14px;
+    }
+    
+    .nav-links a i {
+        font-size: 14px;
+    }
+    .category-button{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 804px){
+    .navbar{
+        visibility: visible;
+    }
+    .menu-1, .menu-2{
+        visibility: hidden;
+    }
+}
+
+
+/* BANNER */
+
+/* .banner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -224,4 +432,7 @@ header {
 .banner img {
     max-width: 40%;
     border-radius: 10px;
-}
+} */
+
+
+/* PRODUCTPS? */

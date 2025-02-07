@@ -215,6 +215,7 @@ button.btn.btn-search:hover {
     visibility: hidden;
 }
 
+
 /* MEDIA QUERYS */
 @media screen and (max-width: 1100px){
     .nav-links {
