@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 *{
-    background-color: #f7f6ec;
+  background-color: #f7f6ec;  
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background: #f7f6ec;
 }
 
 /* MENU DE NAVEGACION RESPONSIVO, CON BOOTSTRAP*/
@@ -250,8 +251,7 @@ button.btn.btn-search:hover {
     position: absolute;
     top: 45px;
     left: 0;
-    background-color: #fff;
-    border: 2px solid #5c3d2e;
+    background-color: #ffff;
     border-radius: 10px;
     list-style: none;
     padding: 10px 0;
@@ -404,48 +404,163 @@ button.btn.btn-search:hover {
 }
 
 
-/* BANNER */
-
-/* .banner {
+/*BANNER */
+ 
+.banner {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    background: linear-gradient(to right, #f8d7da, #fbe8e8);
+    background: #e0a2a2;
+    width: 80vw;
+    height: 60vh;
+    text-align: start;
+    flex-direction: column;
 }
-
-.content {
-    max-width: 50%;
+.banner-content {
+    background: transparent;
+    max-width: 70%;
+    font-family: "poppins";
+    margin:auto 40px ;
 }
-
-.content h1 {
-    font-size: 32px;
+.banner-content h1 {
+    background: transparent;
+    font-size: 30pt;
     color: #5c3d2e;
+    margin-bottom: 0px;
+    font-weight: bold;
 }
-
-.content p {
+.banner-content p {
+    background: transparent;
     font-size: 18px;
     color: #7a5441;
+    margin-top: 0px;
+}
+.banner a{
+    text-decoration: none;
+    color: #5c3d2e;
+    font-family: "poppins";
+    font-weight:bold ;
+}
+
+.banner button{
+    background-color: #f6f1e8;
+    display: inline;
+    width: 200px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+/* PRODUCTOS*/
+.productos{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;}
+.productos h1 {
+    font-size: 20pt;
+    font-family: "poppins";
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #5c3d2e;
+    font-weight: bold;}
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+.productos img {
+    border-radius: 25px;
+    height: 250px;
+    width: 250px;
+    margin: 0 0 10px 0;}
+.producto p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #7a5441;
+    margin: 0 0 50px;}
+.producto a{
+    text-decoration: none;
+    color: #7a5441;}
+
+
+/* Antojos*/
+.Antojos{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+    flex-direction: column;
+}
+.Antojos h1 {
+    text-align: center;
+    font-size: 30pt;
+    font-family: "poppins";
+    font-weight: bold;
+    color:#5c3d2e;
+}
+.Antojos a{
+    text-decoration: none;
+    color: #7a5441;
+    font-size: 13pt;
+    font-weight: bold;
+}
+.Antojos button {
+    width: 40vh;
+    height: 5vh;
+    margin: 5px auto 35px;
+    border-radius: 22px;
+    border: none;
+}
+.Antojos h2{
+    font-size: 25pt;
+    margin: 50px auto 0px;
+    background: none;
+    font-weight:bold ;
+    color: #5c3d2e;
+}
+.Antojos p{
+    background: none;
+    width: 80%;
+    font-size: 15pt;
+    margin: 0 auto 5px;
+    color: #5c3d2e;
+}
+.Antojo {
+    background: linear-gradient(to left, #e0a2a2, #e4e0df);
+    padding: auto;
+    width: 40%;
+    height: 40%;
+    border-radius: 30px;
+    margin:auto;
+    box-shadow: 0px 4px 10px 0px gray;
+    font-family: "poppins";
+}
+.Antojo2 {
+    background: linear-gradient(to left, #e0c7a2, #ffffff);
+    padding: auto;
+    width: 40%;
+    height: 40%;
+    border-radius: 30px;
+    margin: 30px auto;
+    box-shadow: 0px 4px 10px 0px gray;
+    font-family: "poppins";
 }
 
 
-.banner img {
-    max-width: 40%;
-    border-radius: 10px;
-} */
 
 
-/* PRODUCTPS? */
-
-
-
-
-
-
-
-
-
-
+    /* .whatsapp{
+        color: #a05a46;    
+        border-radius: 30px;
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        text-align: center;
+    } */
 
 /* FOOTER */
 .footer {
@@ -498,7 +613,7 @@ button.btn.btn-search:hover {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 300px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -513,3 +628,11 @@ button.btn.btn-search:hover {
         justify-content: center;
     }
 }
+
+
+
+
+
+
+
+

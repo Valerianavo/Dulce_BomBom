@@ -22,10 +22,10 @@
                     <i class="fas fa-bars"></i> NUESTRAS CATEGORÍAS
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Tradicionales</a></li>
-                    <li><a href="#">Opciones Saludables</a></li>
-                    <li><a href="#">Ediciones Especiales</a></li>
-                    <li><a href="#">Personalizables</a></li>
+                    <li><a href="html/tradicionales/tradicionales.html">Tradicionales</a></li>
+                    <li><a href="html/opci-saludables/opciones saludables.html">Opciones Saludables</a></li>
+                    <li><a href="html/edi-especiales/ediciones especiales.html">Ediciones Especiales</a></li>
+                    <li><a href="html/personalizables/personalizables.html">Personalizables</a></li>
                 </ul>
             </div>
         </div>
@@ -70,10 +70,10 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">NUESTRAS CATEGORÍAS</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Tradicionales</a></li>
-                                    <li><a class="dropdown-item" href="#">Opciones Saludables</a></li>
-                                    <li><a class="dropdown-item" href="#">Ediciones Especiales</a></li>
-                                    <li><a class="dropdown-item" href="#">Personalizables</a></li>
+                                    <li><a href="html/tradicionales/tradicionales.html">Tradicionales</a></li>
+                                    <li><a href="html/opci-saludables/opciones saludables.html">Opciones Saludables</a></li>
+                                    <li><a href="html/edi-especiales/ediciones especiales.html">Ediciones Especiales</a></li>
+                                    <li><a href="html/personalizables/personalizables.html">Personalizables</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -85,29 +85,60 @@
                 </div>
             </div>
         </nav>
-        
     </header>
 
     <main>
-        <section class="contacto">
-            <h2 class="contacto-h2">Contacto</h2>
-            <form>
-                <div class="input-group">
-                    <input type="text" placeholder="Nombre">
-                    <input type="email" placeholder="Correo electrónico">
-                </div>
-                <input type="text" placeholder="Asunto">
-                <textarea placeholder="Escribe tu mensaje"></textarea>
-                <button class="btn-2" type="submit">Enviar</button>
-            </form>
+        <section class="contact-container">
+            <article class="contact-info">
+                <h1 class="contacto-h1">¡Nos pondremos en contacto contigo!</h1>
+                <p class="contacto-texto">
+                    Tienes dudas o consultas, deja tus datos y nos podremos comunicar contigo. Recuerda que los deliverys 
+                    se realizan de lunes a domingo de 9 am a 6 pm y deben realizarse con 78 horas de anticipación, no olvides que en las notas adicionales puedes contarnos si eres alérgico a algún insumo.
+                </p>
+                <div class="social-links">
+                    <div class="social-item">
+                        <a href="https://wa.me/51999999999" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>(+51) 999 999 999</span>
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://www.instagram.com/tu_usuario" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://www.facebook.com/tu_pagina" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+            </article>
+        
+            <article class="contacto">
+                <h2 class="contacto-h2">Contacto</h2>
+                <form action="https://formsubmit.co/f3408916@gmail.com" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Asunto">
+                    <textarea name="message" placeholder="Escribe tu mensaje"></textarea>
+                    <button class="btn-2" type="submit">Enviar</button>
+                </form>
+            </article>
         </section>
+        
+        
+        
 
         <section class="encuentranos">
             <h3 class="text-center">ENCUÉNTRANOS</h3>
             <div class="locations-container">
                 
                 <article class="locations">
-                    <img class="card-img" src="assets/img/lima-centro.png" alt="Sede Lima Cercado">
+                    <img class="card-img" src="assets/img/contacto/lima-centro.png" alt="Sede Lima Cercado">
                     <div class="text-container">
                         <h4>Sede Lima Cercado</h4>
                         <address>
@@ -119,7 +150,7 @@
                 </article>
                 
                 <article class="locations">
-                    <img class="card-img" src="assets/img/santa-anita.png" alt="Sede Santa Anita">
+                    <img class="card-img" src="assets/img/contacto/santa-anita.png" alt="Sede Santa Anita">
                     <div class="text-container">
                         <h4>Sede Santa Anita</h4>
                         <address>
@@ -131,7 +162,7 @@
                 </article>  
                 
                 <article class="locations">
-                    <img class="card-img" src="assets/img/miraflores.png" alt="Sede Miraflores">
+                    <img class="card-img" src="assets/img/contacto/miraflores.png" alt="Sede Miraflores">
                     <div class="text-container">
                         <h4>Sede Miraflores</h4>
                         <address>
@@ -143,7 +174,7 @@
                 </article>
                 
                 <article class="locations">
-                    <img class="card-img" src="assets/img/comas.png" alt="Sede Comas">
+                    <img class="card-img" src="assets/img/contacto/comas.png" alt="Sede Comas">
                     <div class="text-container">
                         <h4>Sede Comas</h4>
                         <address>
