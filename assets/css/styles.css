@@ -489,42 +489,36 @@ button.btn.btn-search:hover {
     justify-content: space-between;
     gap: 20px;
     text-align: center;
-    flex-direction: column;
-}
+    flex-direction: column;}
 .Antojos h1 {
     text-align: center;
     font-size: 30pt;
     font-family: "poppins";
     font-weight: bold;
-    color:#5c3d2e;
-}
+    color:#5c3d2e;}
 .Antojos a{
     text-decoration: none;
     color: #7a5441;
     font-size: 13pt;
-    font-weight: bold;
-}
+    font-weight: bold;}
 .Antojos button {
     width: 40vh;
     height: 5vh;
     margin: 5px auto 35px;
     border-radius: 22px;
-    border: none;
-}
+    border: none;}
 .Antojos h2{
     font-size: 25pt;
     margin: 50px auto 0px;
     background: none;
     font-weight:bold ;
-    color: #5c3d2e;
-}
+    color: #5c3d2e;}
 .Antojos p{
     background: none;
     width: 80%;
     font-size: 15pt;
     margin: 0 auto 5px;
-    color: #5c3d2e;
-}
+    color: #5c3d2e;}
 .Antojo {
     background: linear-gradient(to left, #e0a2a2, #e4e0df);
     padding: auto;
@@ -533,8 +527,7 @@ button.btn.btn-search:hover {
     border-radius: 30px;
     margin:auto;
     box-shadow: 0px 4px 10px 0px gray;
-    font-family: "poppins";
-}
+    font-family: "poppins";}
 .Antojo2 {
     background: linear-gradient(to left, #e0c7a2, #ffffff);
     padding: auto;
@@ -543,8 +536,8 @@ button.btn.btn-search:hover {
     border-radius: 30px;
     margin: 30px auto;
     box-shadow: 0px 4px 10px 0px gray;
-    font-family: "poppins";
-}
+    font-family: "poppins";}
+
 
 
 

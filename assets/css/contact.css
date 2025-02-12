@@ -353,7 +353,6 @@ button.btn-2:hover {
 
 /* ENCUÉNTRANOS */
 h3.text-center {
-    text-align: center;
     padding: 40px 0px 10px 0px;
     color: #5c3d2e;
     font-size: 47px;
@@ -424,26 +423,6 @@ img.card-img {
     font-size: 1.2em;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .locations-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .locations {
-        width: 90%;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    img.card-img {
-        width: 100%;
-        height: auto;
-    }
-}
-
 
 .contact-container {
     display: flex;
@@ -474,6 +453,83 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info, .footer-social, .footer-contact {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .footer-social p, .footer-contact p {
+        justify-content: center;
+    }
+
+    h3.text-center{
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 804px) {
+    .contact-container {
+        margin-top: 30px;
+        display: block;
+    }
+
+    article.contact-info, .contacto{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    article.contact-info{
+        padding: 0px 30px 30px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .locations-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .locations {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    img.card-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px){
+    h3.text-center{
+        font-size: 33px;
+    }
+}
+
+@media (max-width: 568px){
+    h3.text-center{
+        font-size: 28px;
+    }
+
+    article.contact-info {
+        padding: 0px 10px 30px 10px;
+    }
+}
+
 
 /* FOOTER */
 .footer {
