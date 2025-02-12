@@ -438,6 +438,126 @@ img{
 }
 
 
+/* RESPONSIVE */
+
+@media (max-width: 1233px) {
+    .div-month {
+        display: block;
+        text-align: center;
+    }
+
+    .brownie-promo {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    h3.pack-amor {
+        text-align: center;
+    }
+
+    ul.pack-amor {
+        list-style: none; 
+        padding: 0; 
+    }
+
+    ul.pack-amor li {
+        text-align: center; 
+    }
+
+    .promo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .promo-container{
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .countdown {
+        font-size: 1em;
+        font-weight: bold;
+        color: #b22222;
+        text-align: center;
+    }
+
+    .btn {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    h5.text-center.pb-2{
+        padding: 8px 19px 8px 19px;
+    }
+}
+
+@media (max-width: 804px) {
+
+    .titulo-contenido{
+        margin-top: 66px;
+    }
+    h5.text-center.pb-2{
+        padding: 18px 19px 8px 19px;
+    }
+
+    .promotions-category {
+        padding: 60px 0px 0px 0px;
+    }
+
+    .promo {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .slider {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slide {
+        width: 80%;
+    }
+
+    .sub-title {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .p-promo {
+        font-size: 1em;
+    }
+}
+
+/* 📲 Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .promo {
+        width: 80%;
+        border-radius: 15px;
+        padding: 30px;
+    }
+
+    .slide {
+        width: 90%;
+    }
+
+    .p-promo {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    .countdown {
+        font-size: 1em;
+    }
+}
+
 
 /* FOOTER */
 .footer {
