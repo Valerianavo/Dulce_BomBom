@@ -33,7 +33,7 @@
 
         <div class="menu-2">
             <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
+                <input type="text" id="buscador" placeholder="Buscar...">
                 <button><i class="fas fa-search"></i></button>
             </div>
             <nav>
@@ -78,7 +78,7 @@
                             </li>
                         </ul>
                         <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                            <input id="buscador" class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
                             <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
                         </form>
                     </div>
@@ -87,33 +87,97 @@
         </nav>
     </header>
     <!-- Tradicionales -->
-    <section class="Tradicionales">
+    <div id="contenedor-cards" class="Tradicionales">
         <h1>Opciones Saludables</h1>
-        <div class="Producto">
-            <a href="o-Bizcocho.html"><img src="../../assets/img/Opciones Saludables/Bizcochode almendras.jpg" alt=""></a>
-            <a href="o-Bizcocho.html"><p>Bizcocho de almedra</p></a>
-        </div>
-        <div class="Producto">
+        <div  class="Producto" data-nombre="Delicia de fresa">
+            <a href="o-Bizcocho.html"><img src="../../assets/img/Opciones Saludables/Bizcochode almendras.jpg"alt=""></a>
+            <a href="o-Bizcocho.html"><p>Bizcocho de almendras</p></a></div>
+        
+        <div class="Producto" data-nombre="Blueberry">
             <a href="o-blueberry.html"><img src="../../assets/img/Opciones Saludables/blueberry.jpg" alt=""></a>
-            <a href="o-blueberry.html"><p>Blueberry</p></a>
-        </div>
-        <div class="Producto">
+            <a href="o-blueberry.html"><p>Blueberry</p></a></div>
+
+        <div class="Producto" data-nombre="Cheesecake Vegano">
             <a href="t-Piono de vainilla.html"><img src="../../assets/img/Opciones Saludables/chess_veg.jpg" alt=""></a>
-            <a href="t-Piono de vainilla.html"><p>Cheesecake vegana</p></a>
-        </div>
-        <div class="Producto">
+            <a href="t-Piono de vainilla.html"><p>Cheesecake Vegano</p></a></div>
+
+        <div class="Producto" data-nombre="Flan de coco">
             <a href="o-flan de coco.html"><img src="../../assets/img/Opciones Saludables/Flan-de-Coco-.png" alt=""></a>
-            <a href="o-flan de coco.html"><p>Flan de coco</p></a>
-        </div>
-        <div class="Producto">
+            <a href="o-flan de coco.html"><p>Flan de coco</p></a></div>
+ 
+        <div class="Producto" data-nombre="Mouse de palta">
             <a href="o-Mouse de palta.html"><img src="../../assets/img/Opciones Saludables/Mousse-de-aguacate-y-cacao.png" alt=""></a>
-            <a href="o-Mouse de palta.html"><p>Mouse de palta</p></a>
-        </div>
-        <div class="Producto">
+            <a href="o-Mouse de palta.html"><p>Mouse de palta</p></a></div>
+        
+        <div class="Producto" data-nombre="Torta de pistacho">
             <a href="o-torta de pistacho.html"><img src="../../assets/img/Opciones Saludables/torta de pistacho.jpg" alt=""></a>
-            <a href="o-torta de pistacho.html"><p>Torta de pistacho</p></a>
+            <a href="o-torta de pistacho.html"><p>Torta de pistacho</p></a></div>      
+
+        <div class="Producto" data-nombre="brownies sin gluten">
+            <a href="o-browniesgluten.html"><img src="../../assets/img/Opciones Saludables/brownie-sin-gluten.jpg" alt=""></a>
+            <a href="o-browniesgluten.html"><p>Brownies sin gluten</p></a></div>
+
+        <div class="Producto" data-nombre="Tarta de galletas sin azucar">
+            <a href="o-tartadegalleta.html"><img src="../../assets/img/Opciones Saludables/tarta de galleta.jpg" alt=""></a>
+            <a href="o-tartadegalleta.html"><p>Tarta de galletas sin azucar</p></a></div>
+
+        <div class="Producto" data-nombre="Cinco leches vegano">
+            <a href="o-cincolechesveg.html"><img src="../../assets/img/Opciones Saludables/cincoleches.png" alt=""></a>
+            <a href="o-cincolechesveg.html"><p>Cinco leches vegano</p></a></div>
+
+        <div class="Producto" data-nombre="Cookies veganas">
+            <a href="o-cookiesveg.html"><img src="../../assets/img/Opciones Saludables/chocolate-chip-cookie.png" alt=""></a>
+            <a href="o-cookiesveg.html"><p>Cookies veganas</p></a></div>
+
+        <div class="Producto" data-nombre="Cupcakes sin azucar">
+            <a href="o-cupcakes.html"><img src="../../assets/img/Opciones Saludables/cupcakes.png" alt=""></a>
+            <a href="o-cupcakes.html"><p>Cupcakes sin azucar</p></a></div>
+
+        <div class="Producto" data-nombre="Keke de platano vegano">
+            <a href="o-kekeplatano.html"><img src="../../assets/img/Opciones Saludables/kekeplatano.png" alt=""></a>
+            <a href="o-kekeplatano.html"><p>Keke de platano vegano</p></a></div>
+
+         <div class="Producto" data-nombre="Mazamorra de calabaza">
+            <a href="o-mazamorracalabaza.html"><img src="../../assets/img/Opciones Saludables/mazamorracala.jpg" alt=""></a>
+            <a href="o-mazamorracalabaza.html"><p>Mazamorra de calabaza</p></a></div>
+
+        <div class="Producto" data-nombre="Tarta de arandanos">
+            <a href="o-tartadearandanos.html"><img src="../../assets/img/Opciones Saludables/arandanos.jpg" alt=""></a>
+            <a href="o-tartadearandanos.html"><p>Tarta de arandanos</p></a></div>
+
+        <div class="Producto" data-nombre="Tarta de manzana vegana">
+            <a href="o-tartademanzan.html"><img src="../../assets/img/Opciones Saludables/manzana.jpg" alt=""></a>
+            <a href="o-tartademanzan.html"><p>Tarta de manzana vegana</p></a></div>
+
+        <div class="Producto" data-nombre="Tiramisu sin gluten">
+            <a href="o-tiramisgluten.html"><img src="../../assets/img/Opciones Saludables/tiramisuveg.jpg" alt=""></a>
+            <a href="o-tiramisgluten.html"><p>Tiramisu sin gluten</p></a></div>
+
+        <div class="Producto" data-nombre="Brownies de camote">
+            <a href="o-Brownies de Camote.html"><img src="../../assets/img/Opciones Saludables/brownies-de-camotel.jpg" alt=""></a>
+            <a href="o-Brownies de Camote.html"><p>Brownies de camote</p></a></div>      
+
+        <div class="Producto" data-nombre="Trufas de coco">
+            <a href="o-Trufas Energéticas de Cacao y Coco.html"><img src="../../assets/img/Opciones Saludables/trufasdecoco.png" alt=""></a>
+            <a href="o-Trufas Energéticas de Cacao y Coco.html"><p>Trufas de coco</p></a></div>      
+
+        <div class="Producto" data-nombre="Pan de platano">
+            <a href="o-pandeplatano.html"><img src="../../assets/img/Opciones Saludables/Pan-de-banano.jpg" alt=""></a>
+            <a href="o-pandeplatano.html"><p>Pan de platano</p></a></div>      
+
+        <div class="Producto" data-nombre="Trufas de coco y Chocopastel">
+            <a href="o-galletadeavena.html"><img src="../../assets/img/Opciones Saludables/avena.png" alt=""></a>
+            <a href="o-galletadeavena.html"><p>Galletas de avena</p></a></div>      
+
+        <div class="Producto" data-nombre="Muffins de manzana">
+            <a href="o-muffinsmanza.html"><img src="../../assets/img/Opciones Saludables/muffins manzana.jpg" alt=""></a>
+            <a href="o-muffinsmanza.html"><p>Muffins de manzana</p></a></div>      
+
+            <div class="Producto" data-nombre="Muffins de manzana">
+                <a href="o-muffinszana.html"><img src="../../assets/img/Opciones Saludables/muffins-de-tarta-de-zanahoria_version_1673114076.jpg" alt=""></a>
+                <a href="o-muffinszana.html"><p>Muffins de zanahoria</p></a></div>  
+
         </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -148,5 +212,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../../assets/js/search.js"></script>
 </body>
 </html>
+
