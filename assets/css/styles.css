@@ -3,11 +3,11 @@
   background-color: #f7f6ec;  
 }
 
-body {
+.body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f7f6ec;
+    background-color: #f7f6ec; 
 }
 
 /* MENU DE NAVEGACION RESPONSIVO, CON BOOTSTRAP*/
@@ -517,31 +517,32 @@ button.btn.btn-search:hover {
     justify-content: space-between;
     gap: 20px;
     text-align: center;
-    flex-direction: column;}
-.Antojos h1 {
+    flex-direction: row;}
+.Antojos-container h1 {
+
     text-align: center;
     font-size: 30pt;
     font-family: "poppins";
     font-weight: bold;
     color:#5c3d2e;}
-.Antojos a{
+.Antojos-container a{
     text-decoration: none;
     color: #7a5441;
     font-size: 13pt;
     font-weight: bold;}
-.Antojos button {
+.Antojos-container button {
     width: 40vh;
     height: 5vh;
     margin: 5px auto 35px;
     border-radius: 22px;
     border: none;}
-.Antojos h2{
+.Antojos-container h2{
     font-size: 25pt;
     margin: 50px auto 0px;
     background: none;
     font-weight:bold ;
     color: #5c3d2e;}
-.Antojos p{
+.Antojos-container p{
     background: none;
     width: 80%;
     font-size: 15pt;
@@ -567,6 +568,63 @@ button.btn.btn-search:hover {
     font-family: "poppins";}
 
 
+
+/* 🔹 RESPONSIVIDAD */
+@media (max-width: 1024px) {
+    .banner {
+        height: 400px;
+    }
+
+    .info h1 {
+        font-size: 28px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .Antojos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Antojo, .Antojo2 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px){
+    .banner{
+        margin: 80px 20px 20px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+
+    .info h1 {
+        font-size: 24px;
+    }
+
+    .info p {
+        font-size: 12px;
+    }
+
+    .Antojos{
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .Antojo, .Antojo2 {
+        width: 100%;
+    }
+}
 
 
 

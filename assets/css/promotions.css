@@ -532,7 +532,6 @@ img{
     }
 }
 
-/* 📲 Móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
     .promo {
         width: 80%;

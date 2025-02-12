@@ -479,6 +479,107 @@ button.btn.btn-search:hover {
     font-size: 30px;
 }
 
+
+/* --- RESPONSIVE  --- */
+
+@media (max-width: 1280px) {
+    .personalizables img {
+        height: 250px;
+    }
+
+    .pedidos-grandes{
+        display: block;
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .personalizables img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 804px) {
+    .personalizables h1 {
+        margin-top: 70px;
+    }
+
+    .Producto {
+        width: 50%;
+        margin: 10px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .personalizables {
+        padding: 0;
+    }
+    .personalizables img {
+        height: 180px;
+        width: 100%;
+    }
+    .Producto {
+        width: 90%;
+        margin: 10px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .personalizables {
+        flex-direction: column;
+        padding: 0;
+    }
+    .personalizables img {
+        height: 200px;
+    }
+    .Producto p {
+        font-size: 12pt;
+    }
+    .personalizables h1 {
+        font-size: 18pt;
+    }
+
+    img.card-img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 393px) {
+    .Producto {
+        width: 100%;
+        margin: 5px;
+        height: 330px;
+    }
+    .personalizables img {
+        height: 240px;
+        width: 100%;
+    }
+
+    .personalizables img {
+        height: 200px;
+    }
+
+    .pedidos-container{
+        padding-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 367px) {
+    .personalizables img {
+        height: 120px;
+    }
+    .Producto p {
+        font-size: 11pt;
+    }
+}
+
+
+
 /* FOOTER */
 .footer {
     background-color: #5c3d2e;  

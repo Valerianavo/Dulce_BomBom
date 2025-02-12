@@ -452,6 +452,80 @@ button.btn.btn-search:hover {
 }
 
 
+/* --- RESPONSIVE  --- */
+
+
+@media (max-width: 1280px) {
+    .Tradicionales img {
+        height: 220px;
+        width: 220px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    
+    .Tradicionales img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 804px){
+    .Tradicionales h1{
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Tradicionales img {
+        height: 150px;
+        width: 150px;
+    }
+    .Producto p {
+        font-size: 13pt;
+    }
+}
+
+
+@media (max-width: 480px) {
+    
+    .Tradicionales {
+        padding: 10px;
+    }
+    .Tradicionales img {
+        height: 130px;
+        width: 130px;
+    }
+    .Producto p {
+        font-size: 12pt;
+    }
+
+    .Tradicionales h1{
+        font-size: 16pt;
+    }
+
+}
+
+@media (max-width: 390px){
+    .Tradicionales {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .Tradicionales img {
+        height: 120px;
+        width: 120px;
+    }
+    .Producto p {
+        font-size: 11pt;
+    }
+}
+
+
+
 /* FOOTER */
 .footer {
     background-color: #5c3d2e;  

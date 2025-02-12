@@ -496,7 +496,133 @@ button.btn.btn-search:hover {
     color: #7a5441;}
 
 
+    @media (max-width: 1500px){
+        .Tradicional{
+            margin-right: 40px;
+        }
+    }
 
+    @media (max-width: 1244px) {
+        .Tradicionales {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .Tradicional p, .Tradicional h4{
+            font-size: 17px;
+        }
+    }
+
+    @media (max-width: 1183px){
+        .Tradicional p, .Tradicional h4{
+            font-size: 15px;
+        }
+    }
+    
+
+    @media (max-width: 1024px) {
+        
+        .Tradicional h2 {
+            font-size: 25px;
+            margin: 70px 10px 20px 0px;
+        }
+
+        .Tradicional h3 {
+            font-size: 18px;
+        }
+
+        .Tradicional p, .Tradicional h4{
+            font-size: 13px;
+        }
+
+        .productos img {
+            max-width: 220px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        
+        .Tradicional h2 {
+            font-size: 20px;
+            margin: 70px 10px 20px 0px;
+        }
+
+        .Tradicional h3 {
+            font-size: 16px;
+        }
+
+        .Tradicional p, .Tradicional h4{
+            font-size: 11px;
+        }
+
+    }
+    
+    @media (max-width: 800px) {
+        .Tradicional p, .Tradicional h4{
+            font-size: 10px;
+        }
+        .Tradicional h3 {
+            font-size: 14px;
+        }
+        .productos img {
+            max-width: 200px;
+        }
+    }
+    
+    @media (max-width: 720px) {
+        .Tradicionales {
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .Tradicional{
+            padding: 0px 20px 0px 30px;
+        }
+        .Tradicional h2 {
+            margin: 0;
+            font-size: 2tpx;
+        }
+        .producto p {
+            font-size: 16px;
+        }
+
+        .Tradicionales img{
+            width: 70%;
+            margin: 70px 0px 20px 0px;
+            padding: 0;
+            height: 300px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .Tradicional h2 {
+            font-size: 22px;
+        }
+        .producto p {
+            font-size: 13px;
+        }
+        .productos img {
+            max-width: 180px;
+        }
+
+        .Tradicionales img{
+            width: 60%;
+            height: 200px;
+        }
+    }
+    
+    @media (max-width: 360px) {
+        .Tradicional h2 {
+            font-size: 20px;
+        }
+        .producto p {
+            font-size: 12px;
+        }
+        .productos img {
+            max-width: 160px;
+        }
+    }
+    
 
 
 /* FOOTER */
