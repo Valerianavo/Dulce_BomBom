@@ -1,7 +1,7 @@
 function startCountdown() {
     const countdownElement = document.getElementById("countdown");
     const year = new Date().getFullYear();
-    const offerDeadline = new Date(year, 1, 28, 23, 59, 59); // Febrero es el mes 1 en JavaScript (0-based index)
+    const offerDeadline = new Date(year, 7, 28, 23, 59, 59); // Febrero es el mes 1 en JavaScript (0-based index)
 
     function updateCountdown() {
         const now = new Date();
