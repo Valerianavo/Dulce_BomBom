@@ -465,7 +465,7 @@ header {
 .banner{
     width: 95%;
     height: 700px;
-    animation: banner 20s infinite linear alternate;
+    animation: banner 15s infinite linear alternate;
     background-size: 100% 100%;
     position: relative;
     display: flex;
