@@ -478,16 +478,16 @@ header {
 
 @keyframes banner{
     0%, 20%{
-        background-image: url(../img/banner1\(1\).jpg)
+        background-image: url(../img/banner1.jpg)
     }
     25%, 45%{
-        background-image: url(../img/banner1\(2\).jpg);
+        background-image: url(../img/banner2.jpg);
     }
     50%, 70%{
-        background-image: url(../img/banner1\(3\).jpg);
+        background-image: url(../img/banner3.jpg);
     }
     85%, 100%{
-        background-image: url(../img/banner1\(4\).jpg);
+        background-image: url(../img/banner4.jpg);
     }
 }
 
