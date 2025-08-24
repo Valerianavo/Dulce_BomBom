@@ -446,6 +446,7 @@ header {
 }
 
 @media screen and (max-width: 804px) {
+    
     .navbar {
         visibility: visible;
         margin-top: 40px;
@@ -677,6 +678,10 @@ input, textarea {
 }
 
 @media (max-width: 804px) {
+    
+    header, h1.contacto-h1{
+        padding: 0;
+    }
     .contact-container {
         display: block;
     }
@@ -1072,12 +1077,12 @@ body.modo-oscuro .diet-labels .label {
 }
 
 
-.modo-oscuro .logo,
-.modo-oscuro .logo strong,
-.modo-oscuro .logo span,
-.modo-oscuro .logo .span-1 {
+body.modo-oscuro .logo,
+body.modo-oscuro .logo strong,
+body.modo-oscuro .logo span,
+body.modo-oscuro .logo .span-1 {
   background: transparent !important;
-  color: #fff !important;
+  color: #fff ;
 }
 
 .modo-oscuro .diet-labels {

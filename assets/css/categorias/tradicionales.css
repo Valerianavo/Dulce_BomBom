@@ -474,7 +474,10 @@ button.btn.btn-search:hover {
 
 @media (max-width: 804px){
     .Tradicionales h1{
-        margin-top: 70px;
+        margin-top: 0px;
+    }
+    .switch {
+        margin-top: 85px;
     }
 }
 

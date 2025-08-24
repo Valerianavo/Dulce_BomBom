@@ -582,6 +582,9 @@ img.card-img{
     header{
         padding: 0;
     }
+    h5.mt-5 {
+    margin: 10px 20px 20px 20px !important;
+    }
 }
 
 

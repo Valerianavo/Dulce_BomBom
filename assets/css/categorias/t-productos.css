@@ -393,6 +393,9 @@ button.btn.btn-search:hover {
 }
 
 @media screen and (max-width: 804px){
+    .switch {
+        margin-top: 85px;
+    }
     .navbar{
         visibility: visible;
     }
@@ -401,7 +404,7 @@ button.btn.btn-search:hover {
     }
 
     .btn-volver{
-        margin-top: 50px;
+        margin-top: 0px;
     }
 }
 

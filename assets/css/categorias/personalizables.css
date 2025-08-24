@@ -482,9 +482,12 @@ button.btn.btn-search:hover {
 
 @media (max-width: 804px) {
     .personalizables h1 {
-        margin-top: 70px;
+        margin-top: 0px;
     }
 
+    .switch {
+        margin-top: 85px;
+    }
     .pproducto {
         margin: 10px 60px 10px 60px;
     }
