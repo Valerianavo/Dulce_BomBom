@@ -449,10 +449,14 @@ header {
 @media screen and (max-width: 804px) {
     .navbar {
         visibility: visible;
+        margin-top: 40px;
     }
 
     .menu-1, .menu-2 {
         display: none;
+    }
+    .switch{
+        margin: 80px 10px 10px 10px;
     }
 
 }
@@ -576,7 +580,7 @@ img.card-img{
 
 @media (max-width: 804px) {
     header{
-        height: 100px;
+        padding: 0;
     }
 }
 
