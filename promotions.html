@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce BomBom</title>
+    <link rel="stylesheet" href="assets/css/promotions.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/988110bf96.js" crossorigin="anonymous"></script>
+    
+</head>
+<body class="ModOscuro" style=" background-color: #f7f6ec;  "> 
+    <div class="take">
+        <div class="contenedor-marquesina">
+            <div class="marquesina-texto" id="marquesina-texto">
+                <span class="mar">⭐ ¡Postres veganos, sin gluten y bajos en azúcar!</span>
+                <span class="mar">☆ ¡Envíos a todo el país!</span>
+                <span class="mar">☆ Registrate y obtené 10% de descuento en tu primera compra ⭐</span>
+            </div>
+        </div> 
+    </div>
+ 
+    <label class="switch-toggle">
+        <input type="checkbox" id="modoToggle" onchange="toggleModoOscuro()">
+        <span class="slider-toggle"></span>
+    </label>
+
+
+
+    <header>
+       
+        <div class="menu-1">
+            <div class="logo">
+                <img class="span-1" src="assets/img/icon.png" alt="Logo Dulce BomBom">
+                <strong class="span-1"><span class="span-1">Dulce</span><span class="span-1">BomBom</span></strong>
+            </div>
+            <div class="dropdown">
+                <button class="category-button">
+                    <i class="fas fa-bars"></i> NUESTRAS CATEGORÍAS
+                </button>
+                <ul class="dropdown-menu"> 
+                    <div class=" dropdown">
+                    <li><a href="html/tradicionales/tradicionales.html">Tradicionales</a></li>
+                    <li><a href="html/opci-saludables/opciones saludables.html">Opciones Saludables</a></li>
+                    <li><a href="html/edi-especiales/ediciones especiales.html">Ediciones Especiales</a></li>
+                    <li><a href="html/personalizables/personalizables.html">Personalizables</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+     
+
+        <div class="menu-2">
+            <nav>
+                <ul class="nav-links">
+                    <li ><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li ><a href="about-us.html"><i class="fas fa-users"></i> Nosotros</a></li>
+                    <li ><a href="promotions.html"><i class="fas fa-gift"></i> Promociones</a></li>
+                    <li ><a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="diet-labels">
+                <span class="label"><i class="fas fa-seedling"></i> Vegano</span>
+                <span class="label"><i class="fas fa-wheat-awn"></i> Sin gluten</span>
+                <span class="label"><i class="fas fa-tint-slash"></i> Sin lactosa</span>
+                <span class="label"><i class="fas fa-cube"></i> Bajo en azúcar</span>
+            </div>
+            
+        </div>
+
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="logo">
+                    <img src="assets/img/icon.png" alt="Logo Dulce BomBom">
+                    <strong><span class="span-1">Dulce</span><span>BomBom</span></strong>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <strong><h2 class="span-1">Dulce BomBom</h2></strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="about-us.html"><i class="fas fa-users"></i> Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="promotions.html"><i class="fas fa-gift"></i> Promociones</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">NUESTRAS CATEGORÍAS</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="html/tradicionales/tradicionales.html">Tradicionales</a></li>
+                                    <li><a href="html/opci-saludables/opciones saludables.html">Opciones Saludables</a></li>
+                                    <li><a href="html/edi-especiales/ediciones especiales.html">Ediciones Especiales</a></li>
+                                    <li><a href="html/personalizables/personalizables.html">Personalizables</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="pa">
+
+        <div class="pa2">
+        <h2 class="titulo-contenido pt-3">🍰 ¡Descubre Nuestras Promociones Especiales! </h2>
+        </div>
+        <h5 class="text-center pb-2">Disfruta de descuentos exclusivos en postres <strong class="text-center">veganos, sin gluten, sin lactosa y tradicionales</strong>. ¡Solo por tiempo limitado!</h5>
+        
+        <!-- Oferta del Mes -->
+        <div class="promo">
+            <h4 class="ofert-month"> Promo Especial de Agosto </h4>
+            <div class="div-month ">
+                <div class="promo-img">
+                    <img class="brownie-promo mt-4" src="assets/img/promociones/promo-agosto.jpg" alt="Postre Especial">
+                </div>
+                <div class="promo-container" >
+                    <h3 class="pack-amor">Navo Box</h3>
+                    <p class="pack-amor">Incluye:</p>
+                    <ul class="pack-amor">
+                        <li class="pack-amor">12 empanaditas de carne</li>
+                        <li class="pack-amor">8 sand. de pollo y 8 sand. de jamón y queso</li>
+                        <li class="pack-amor">8 triples clásicos</li>
+                    </ul>
+                    <p class="pack-amor"><strong class="pack-amor">S/ 69.90</strong class="pack-amor"> <del class="pack-amor">S/ 89.90</del></p>
+                </div>
+            </div>
+            
+            <p class="countdown p-promo" id="countdown"></p>
+            <a class="whatsapp btn" target="_blank" href="https://wa.me/123456789?text=Hola,%20¿cómo%20estás?">¡Compra Ahora!</a>
+        </div>
+
+        <!-- Promociones por Categoría -->
+         
+        <h2 class="promotions-category">Promociones por Categoría</h2>
+
+        <!-- Veganos -->
+        <div class="promo1">
+            <h4 class="sub-title">Promociones Veganas 🌱</h4>
+
+            <div class="slider">
+                <div class="slide">
+                    <img class="che2" src="assets/img/promociones/cheesecake-anarcardos.jpg" alt="Cheesecake de Anacardos y Trufas">
+                    <h3 class="che">Cheesecake Vitalidad</h3>
+                    <p class="che">1 Cheesecake de Anacardos + 6 Trufas de Dátiles y Cacao</p>
+                    <p class="che"><strong class="che">S/ 39.90</strong> <del class="che">S/ 48.00</del></p>
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/brownieAlmendra.jpg" alt="Brownies de Almendras">
+                    <h3 class="che">Brownie Natural</h3>
+                    <p class="che">2 Brownies de Almendras + 1 Batido de Leche de Avena y Cacao</p>
+                    <p class="che"><strong class="che">S/ 29.90</strong> <del class="che">S/ 37.00</del></p>
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/galletas-de-avena-y-pasas.jpg" alt="Galletas de Avena y Pasas">
+                    <h3 class="che">Galletas Nutritivas</h3>
+                    <p class="che">8 Galletas de Avena y Pasas + 1 Infusión de Hierbas</p>
+                    <p class="che"><strong class="che">S/ 24.90</strong> <del class="che">S/ 30.00</del></p>
+                </div>
+            </div>  
+            <div class="slider">
+                <div class="slide">
+                    <img src="assets/img/promociones/tarta-de-frutas.jpg" alt="Tarta de Frutas">
+                    <h3 class="che">Tarta Frescura</h3>
+                    <p class="che">1 Porción de Tarta de Frutas + 1 Jugo Natural</p>
+                    <p class="che"><strong class="che">S/ 19.90</strong> <del class="che">S/ 25.00</del></p>
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/muffins-de-chocolate-y-almendras.jpg" alt="Muffin de Chocolate">
+                    <h3 class="che">Muffins Vitales</h3>
+                    <p class="che">2 Muffins de Chocolate con Almendras</p>
+                    <p class="che"><strong class="che">S/ 15.90</strong> <del class="che">S/ 20.00</del></p>
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/donas-saludables.jpeg" alt="Donas Veganas">
+                    <h3 class="che">Donas Naturales</h3>
+                    <p class="che">4 Donas de Chocolate y Vainilla</p>
+                    <p class="che"><strong class="che">S/ 21.90</strong> <del class="che">S/ 28.00</del></p>
+                </div>
+            </div>
+                      
+            
+        </div>
+
+        <!-- Sin Gluten -->
+        <div class="promo2">
+            <h4 class="sub-title">Sin Gluten 🌾</h4>
+
+            <div class="slider">
+                <div class="slide">
+                    <img src="assets/img/promociones/galleta-chia.jpg" alt="Galletas y Muffins Sin Gluten">
+                    <h3 class="che">Pack Dulce Libertad</h3>
+                    <p class="che">6 Galletas de Avena & Chía + 2 Muffins de Almendra</p>
+                    <p class="che"><strong class="che">S/ 28.90</strong> <del class="che">S/ 35.00</del></p>
+                    
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/cheesecake-coco.jpg" alt="Cheesecake Sin Gluten">
+                    <h3 class="che">Mega Combo Sin Culpa</h3>
+                    <p class="che">1 Cheesecake de Coco & Dátiles + 4 Brownies de Nuez</p>
+                    <p class="che"><strong class="che">S/ 45.90</strong> <del class="che">S/ 55.00</del></p>
+                    
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/mini-manzana.jpg" alt="Mini Tartas Sin Gluten">
+                    <h3 class="che">Mini Tartas Lovers</h3>
+                    <p class="che">3 Mini Tartas de Manzana & Canela + 3 Mini Tartas de Coco</p>
+                    <p class="che"><strong class="che">S/ 38.90</strong> <del class="che">S/ 48.00</del></p>
+                    
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slide">
+                    <img src="assets/img/promociones/cookes.jpg" alt="Box Sin Gluten">
+                    <h3 class="che">Box Feliz Digestión</h3>
+                    <p class="che">2 Muffins de Arándanos + 2 Brownies + 4 Cookies</p>
+                    <p class="che"><strong class="che">S/ 32.90</strong> <del class="che">S/ 40.00</del></p>
+                    
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/tarta-almendras.jpeg" alt="Tarta y Blondies Sin Gluten">
+                    <h3 class="che">Tarde Dulce Sin Gluten</h3>
+                    <p class="che">1 Tarta de Chocolate & Almendras + 2 Blondies de Maní</p>
+                    <p class="che"><strong class="che">S/ 34.90</strong> <del class="che">S/ 42.00</del></p>
+                    
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/muffins-platano.jpg" alt="Muffins y Barras Energéticas Sin Gluten">
+                    <h3 class="che">Pack Energía Natural</h3>
+                    <p class="che">2 Muffins de Plátano & Nueces + 2 Barras de Cacao & Dátiles</p>
+                    <p class="che"><strong class="che">S/ 29.90</strong> <del class="che">S/ 36.00</del></p>
+                    
+                </div>
+            </div>     
+            
+        </div>
+
+        <!-- Sin Lactosa -->
+        <div class="promo3">
+            <h4 class="sub-title">Sin Lactosa 🥛</h4>
+            <div class="slider">
+                <div class="slide">
+                    <img src="assets/img/promociones/mini-frutas.jpg" alt="Cheesecake Sin Lactosa">
+                    <h3 class="che">Combo Delicia Sin Lactosa</h3>
+                    <p class="che">1 Cheesecake de Anacardos + 3 Mini Tartas de Frutos Rojos.</p>
+                    <p class="che"><strong class="che">S/ 35.90</strong> <del class="che">S/ 42.00</del></p>
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/brownie-cacao.avif" alt="Brownie Sin Lactosa">
+                    <h3 class="che">Pack Choco-Saludable</h3>
+                    <p class="che">4 Brownies de Cacao + 2 Blondies de Almendra.</p>
+                    <p class="che"><strong class="che">S/ 29.90</strong> <del class="che">S/ 38.00</del></p>
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/Tartagalletascanela.jpg" alt="Tarta Sin Lactosa">
+                    <h3 class="che">Combo Tarta Casera</h3>
+                    <p class="che">1 Tarta de Manzana + 2 Tartaletas de Canela.</p>
+                    <p class="che"><strong class="che">S/ 39.90</strong> <del class="che">S/ 48.00</del></p>
+                </div>
+            </div>
+            
+            <div class="slider">
+                <div class="slide">
+                    <img src="assets/img/promociones/galletas-de-almendra-y-vainilla.jpg" alt="Galletas Sin Lactosa">
+                    <h3 class="che">Promoción Cookie Lovers</h3>
+                    <p class="che">6 Galletas de Almendra y Vainilla + 4 Cookies de Chocolate.</p>
+                    <p class="che"><strong class="che">S/ 24.90</strong> <del class="che">S/ 30.00</del></p>
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/muffins-platano.jpg" alt="Muffin Sin Lactosa">
+                    <h3 class="che">Combo Muffin Energético</h3>
+                    <p class="che">3 Muffins de Plátano y Chocolate + 2 de Arándanos.</p>
+                    <p class="che"><strong class="che">S/ 28.90</strong> <del class="che">S/ 35.00</del></p>
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/2 Muffins + 3 Cookies + 1 Mini Tarta.jpg" alt="Cookies Sin Lactosa">
+                    <h3 class="che">Pack Desayuno Especial</h3>
+                    <p class="che">2 Muffins + 3 Cookies + 1 Mini Tarta.</p>
+                    <p class="che"><strong class="che">S/ 32.90</strong> <del class="che">S/ 40.00</del></p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Tradicionales -->
+        <div class="promo4">
+            <h4 class="sub-title">Tradicionales 🍰</h4>
+            <div class="slider">
+                <div class="slide">
+                    <img src="assets/img/promociones/alfajores.jpg" alt="Tarta de Manzana y Alfajores">
+                    <h3 class="che">Clásico Familiar</h3>
+                    <p class="che">1 Tarta de Manzana Casera + 6 Alfajores Rellenos de Dulce de Leche</p>
+                    <p class="che"><strong class="che">S/ 39.90</strong> <del class="che">S/ 48.00</del></p>
+                    
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/churro.jpg" alt="Donas y Churros">
+                    <h3 class="che">Pack Mañanero</h3>
+                    <p class="che">2 Churros Azucarados + 2 Donas Clásicas + 1 Flan de Caramelo</p>
+                    <p class="che"><strong class="che">S/ 29.90</strong> <del class="che">S/ 37.00</del></p>
+                    
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/chocolate.jpg" alt="Tarta de Chocolate y Cookies">
+                    <h3 class="che">Tradición Chocolatera</h3>
+                    <p class="che">1 Tarta de Chocolate + 6 Cookies Caseras + 1 Chocolate Caliente Gratis</p>
+                    <p class="che"><strong class="che">S/ 42.90</strong> <del class="che">S/ 50.00</del></p>
+                    
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slide">
+                    <img src="assets/img/promociones/pie-de-limon.jpg" alt="Pie de Limón y Tarta de Manzana">
+                    <h3 class="che">Combo Dulce Hogar</h3>
+                    <p class="che">1 Pie de Limón + 1 Tarta de Manzana</p>
+                    <p class="che"><strong class="che">S/ 35.90</strong> <del class="che">S/ 44.00</del></p>
+                    
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/Cupcake_Rainbow.jpg" alt="Cupcakes Clásicos">
+                    <h3 class="che">Box Fiesta</h3>
+                    <p class="che">6 Cupcakes Clásicos (Vainilla, Chocolate y Red Velvet)</p>
+                    <p class="che"><strong class="che">S/ 27.90</strong> <del class="che">S/ 34.00</del></p>
+                    
+                </div>
+            
+                <div class="slide">
+                    <img src="assets/img/promociones/flan-caramelo.jpg" alt="Flanes y Brownies">
+                    <h3 class="che">Pack Tentación</h3>
+                    <p class="che">2 Flanes de Caramelo + 2 Brownies Clásicos + 4 Trufas Caseras</p>
+                    <p class="che"><strong class="che">S/ 31.90</strong> <del class="che">S/ 39.00</del></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p class="m-3">
+                    Nuestras tortas y postres son elaboradas bajo estrictas normas sanitarias 
+                    y con insumos calificados que permiten otorgarle a nuestro cliente lo mejor.
+                </p>
+            </div>
+            
+            <div class="footer-social">
+                <p><i class="fa-brands fa-instagram"></i> 
+                    <a class="text-decoration-none text-white ancor" href="https://instagram.com" target="_blank">Dulcepompom.25</a>
+                </p>
+                <p><i class="fa-brands fa-twitter"></i> 
+                    <a class="text-decoration-none text-white ancor" href="https://twitter.com" target="_blank">PatitasPomPom</a>
+                </p>
+                <p><i class="fa-solid fa-envelope"></i> 
+                    <a class="text-decoration-none text-white ancor" href="https://gmail.com" target="_blank">Dulcepom@gmail.com</a>
+                </p>
+            </div>
+            
+            <div class="footer-contact">
+                <p><i class="fa-solid fa-truck"></i> Delivery: Lunes a Domingo</p>
+                <p>de 9:00am a 8:00pm</p>
+                <p><i class="fa-solid fa-phone"></i> Central Telefónica: (01) 796 6410</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/promotions.js"></script>
+    <script src="assets/js/logo.js"></script>
+    <script src="assets/js/whatsapp.js"></script>
+    <script src="assets/js/texto.js"></script>
+    <script src="assets/js/ModOscuro.js"></script>
+
+   
+
+</body>
+</html>

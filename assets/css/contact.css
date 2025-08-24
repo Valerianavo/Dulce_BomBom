@@ -1,0 +1,1353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+.body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f6ec; 
+}
+
+/* MENU DE NAVEGACION RESPONSIVO, CON BOOTSTRAP*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: #5c3d2e;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 55px;
+    height: auto;
+}
+
+.span-1{
+    display: block;
+}
+
+.menu-1, .menu-2{
+    display: block;
+}
+
+.menu-1{
+    width: 30%;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.menu-2{
+    width: 70%;
+    margin-right: 40px;
+}
+
+/* Botón de categorías */
+.category-button {
+    background-color: #5c3d2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.category-button i {
+    font-size: 18px;
+    background-color: #5c3d2e;
+}
+
+.category-button:hover {
+    background-color: #a05a46;
+}
+
+/* Menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Menú oculto por defecto */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: #fff;
+    border: 2px solid #5c3d2e;
+    border-radius: 10px;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mostrar el menú cuando el mouse está sobre el botón o el menú */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilos de los elementos del menú */
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #5c3d2e;
+    font-size: 16px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+/* Cambio de color al pasar el cursor */
+.dropdown-menu li a:hover {
+    background-color: #f6f1e8;
+}
+
+/* diet labels */
+.diet-labels {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.label {
+    padding: 8px 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: linear-gradient(to bottom, #ffffff, #f6f1e8);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto espejo */
+.label::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewY(45deg);
+    transition: top 0.3s ease-in-out;
+}
+
+.label:hover::after {
+    top: 100%;
+}
+
+.label:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.label i {
+    color: #5c3d2e;
+}
+
+
+
+/* Menú de navegación */
+.nav-links {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    border-bottom: 3px solid #5c3d2e;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-align: center;
+    margin-left: 10px;
+    color: #5c3d2e;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.nav-links a i {
+    font-size: 18px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a05a46;
+    text-decoration: underline;
+}
+
+.nav-links a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #5c3d2e;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.navbar{
+    visibility: hidden;
+}
+
+
+
+/* Botón de categorías */
+.category-button {
+    background-color: #5c3d2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.category-button i {
+    font-size: 18px;
+}
+
+.category-button:hover {
+    background-color: #a05a46;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: #ffff;
+    border-radius: 10px;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #5c3d2e;
+    font-size: 16px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f6f1e8;
+}
+
+
+.nav-links {
+    margin-top: 20px;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    border-bottom: 3px solid #5c3d2e;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-align: center;
+    margin-left: 10px;
+    color: #5c3d2e;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.nav-links a i {
+    font-size: 18px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a05a46;
+    text-decoration: underline;
+}
+
+.nav-links a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #5c3d2e;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+} 
+
+/* MEDIA QUERYS */
+@media screen and (max-width: 1230px){
+    .nav-links a{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1180px){
+    .nav-links a{
+        font-size: 15px;
+    }
+
+    span.label{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1180px){
+    .nav-links a{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 1104px){
+    .nav-links{
+        gap: 20px;
+    }
+    .nav-links a{
+        font-size: 17px;
+    }
+
+    .diet-labels{
+        gap: 15px;
+    }
+    span.label{
+        font-size: 12px;
+    }
+    button.category-button {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1015px){
+    .nav-links{
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 970px) {
+    .nav-links a {
+        font-size: 14px;
+    }
+    
+    .nav-links a i {
+        font-size: 16px;
+    }
+
+    .category-button {
+        font-size: 11px;
+        padding: 8px 10px;
+    }
+
+    .logo {
+        font-size: 16px; 
+    }
+
+    .diet-labels {
+        gap: 15px; 
+    }
+
+    .label {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .nav-links a {
+        font-size: 12px;
+    }
+    
+    .nav-links a i {
+        font-size: 10px;
+    }
+
+    .category-button {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+
+    .diet-labels {
+        gap: 12px;
+        flex-wrap: wrap; /* Permite que los elementos se acomoden si no caben */
+    }
+
+    .label {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    button.category-button {
+        font-size: 10px;
+    }
+    span.label{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 804px) {
+    .navbar {
+        visibility: visible;
+    }
+
+    .menu-1, .menu-2 {
+        display: none;
+    }
+
+}
+
+
+/* FORMULARIO */
+h1.contacto-h1{
+    color: #5a3220;
+    padding-top: 20px;
+}
+
+h2.contacto-h2 {
+    background-color: #fde2e2;
+    color: #5a3220;
+    padding-top: 25px;
+    font-size: 45px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-item a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #a05a46; 
+    transition: color 0.3s ease;
+}
+
+.social-item i {
+    font-size: 54px;
+    margin-bottom: 10px;
+}
+
+form {
+    background-color: #fde2e2;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group{
+    background-color: #fde2e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+input, textarea {
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #5c3d2e;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+article.contact-info {
+    width: 50%;
+    padding: 0px 30px 0px 30px;
+}
+
+button.btn-2 {
+    width: 100%;
+    padding: 10px;
+    background-color: #5c3d2e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    
+}
+
+button.btn-2:hover {
+    background-color: #a05a46;
+}
+
+
+
+/* ENCUÉNTRANOS */
+h3.text-center {
+    padding: 40px 0px 10px 0px;
+    color: #5c3d2e;
+    font-size: 47px;
+}
+
+.encuentranos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.locations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.locations {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background: #f9f6f2;
+    padding: 15px;
+    border-radius: 15px;
+    width: 48%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.locations:hover {
+    transform: scale(1.02);
+}
+
+img.card-img {
+    padding: 10px;
+    width: 50%;
+    border-radius: 25%;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.locations h4 {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #5a3220;
+    margin-bottom: 5px;
+}
+
+.locations p {
+    font-size: 1em;
+    color: #5a3220;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.locations i {
+    color: #c47f3f;
+    font-size: 1.2em;
+}
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.contact-info, .contacto {
+    width: 48%;
+}
+
+.contacto {
+    background-color: #fde2e2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info, .footer-social, .footer-contact {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .footer-social p, .footer-contact p {
+        justify-content: center;
+    }
+
+    h3.text-center{
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 804px) {
+    .contact-container {
+        display: block;
+    }
+
+    article.contact-info, .contacto{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    article.contact-info{
+        padding: 0px 30px 30px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .locations-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .locations {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    img.card-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px){
+    h3.text-center{
+        font-size: 33px;
+    }
+}
+
+@media (max-width: 568px){
+    h3.text-center{
+        font-size: 28px;
+    }
+
+    article.contact-info {
+        padding: 0px 10px 30px 10px;
+    }
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #5c3d2e;  
+    color: white; 
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    background-color: #5c3d2e;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-info {
+    background-color: #5c3d2e;  
+    width: 50%;
+    font-size: 16px;
+}
+
+.footer-info p, a.text-decoration-none.text-white.ancor{
+    background-color: #5c3d2e;  
+}
+
+
+.footer-social, .footer-contact {
+    background-color: #5c3d2e;  
+    width: 25%;
+    text-align: left;
+}
+
+.footer-social p, .footer-contact p {
+    background-color: #5c3d2e;  
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Íconos */
+.footer i {
+    background-color: #5c3d2e;  
+    font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info, .footer-social, .footer-contact {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .footer-social p, .footer-contact p {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        width: 90%;
+    }
+
+    .footer-info, .footer-social, .footer-contact {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .footer-social p, .footer-contact p {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .footer-info, .footer-social, .footer-contact {
+        font-size: 12px;
+    }
+
+    .footer i {
+        font-size: 16px;
+    }
+}
+
+/* Texto corredizo */
+
+.contenedor-marquesina {
+  width: 100%;
+  overflow: hidden;
+  background-color: #5c3d2e;
+  border-bottom: 2px solid #5c3d2e;
+  padding: 7px 0;
+  position: relative;
+  height: 40px;
+  z-index: 1000;
+}
+
+.marquesina-texto {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  left: 100%;
+  align-items: center;
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: #5c3d2e; /* opcional, para que se vea mejor el texto */
+  border-radius: 10px;
+  display: flex;    
+   gap: 40px; /* Espacio entre textos */
+   background-color: #5c3d2e; /* o el color que prefieras */
+   font-size: 14px;
+} 
+
+.mar{
+    background-color: #5c3d2e;
+}
+body.modo-oscuro .contenedor-marquesina,
+body.modo-oscuro .marquesina-texto {
+  background-color: #3a3a3a !important;
+  color: #f5f5f5 !important;
+ border-color: #3a3a3a;}
+ body.modo-oscuro .mar{
+  background-color: #3a3a3a !important;
+  color: #f5f5f5 !important;
+ border-color: #3a3a3a;}
+
+/* whatsapp flotante */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.whatsapp-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.whatsapp-button.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/************************************ Modo Oscuro*******************************/
+
+/* Estilos generales */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo modo oscuro */
+body.modo-oscuro {
+  background-color: #212020 !important;
+  color: #f5f5f5 !important;
+}
+
+/* Contenedor centrado */
+.switch-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "☀️";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+
+input:checked + .slider {
+  background-color: #666;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  content: "🌙";
+}
+
+body.modo-oscuro {
+  background-color: #212020 !important;
+  color: #f5f5f5 !important;
+}
+
+
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro p,
+body.modo-oscuro a,
+body.modo-oscuro span {
+  color: #f5f5f5 !important;
+}
+
+body.modo-oscuro button
+{
+  background-color: #212020 !important;
+  color: #fff !important;
+  border: 1px solid #666;
+}
+
+body.modo-oscuro .menu-1,
+body.modo-oscuro .menu-2,
+body.modo-oscuro nav,
+body.modo-oscuro main,
+body.modo-oscuro header,
+body.modo-oscuro .fa-clock,
+body.modo-oscuro .locations-container,
+body.modo-oscuro .navbar,
+body.modo-oscuro .dropdown-menu,
+body.modo-oscuro .contact-info,
+body.modo-oscuro .contacto-h1,
+body.modo-oscuro .contacto-texto,
+body.modo-oscuro .social-links,
+body.modo-oscuro .social-item,
+body.modo-oscuro .fa-whatsapp,
+body.modo-oscuro .fa-facebook,
+body.modo-oscuro .fa-instagram,
+body.modo-oscuro .fa-solid .fa-phone,                        
+body.modo-oscuro .modal-content,
+body.modo-oscuro .opci-saludables,
+body.modo-oscuro .welcome-modal {
+  background-color: #212020 !important;
+  color: #f5f5f5 !important;
+}
+
+body.modo-oscuro {
+  background: #212020 !important;
+  color: #fff !important;
+}
+
+body.modo-oscuro .menu-1,
+body.modo-oscuro .menu-2,
+body.modo-oscuro nav,
+body.modo-oscuro .dropdown-menu,
+body.modo-oscuro .dropdown {
+  background:#212020 !important;
+  color: #fff !important;
+}
+
+body.modo-oscuro .nav-links a,
+body.modo-oscuro .dropdown-menu a,
+body.modo-oscuro .category-button,
+body.modo-oscuro .nav-link {
+  color: #fff !important;
+}
+
+body.modo-oscuro .diet-labels .label {
+  background: #353535!important;
+  color: #fff !important;
+  border: 1px solid #353535;
+}
+
+.modo-oscuro input,
+.modo-oscuro textarea {
+  background: #222 !important;
+  color: #fff !important;
+  
+}
+.modo-oscuro .footer,
+.modo-oscuro .footer-container {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+.modo-oscuro .footer a {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+
+.modo-oscuro .logo,
+.modo-oscuro .logo strong,
+.modo-oscuro .logo span,
+.modo-oscuro .logo .span-1 {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+.modo-oscuro .diet-labels {
+  background: transparent !important;
+}
+.body.modo-oscuro .diet-labels .label {
+  background: #353535 !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+
+.modo-oscuro main,
+.modo-oscuro .contact-container,
+.modo-oscuro .contact-info,
+.modo-oscuro .contacto {
+  background: transparent !important; 
+}
+/* Footer */
+.modo-oscuro .footer,
+.modo-oscuro .footer-container {
+  background: #111 !important;
+  color: #fff !important;
+}
+.modo-oscuro .footer a {
+  color: #fff !important;
+}
+
+body.modo-oscuro .encuentranos,
+body.modo-oscuro .text-center,
+body.modo-oscuro .text-container,
+body.modo-oscuro .fa-clock{
+  background-color: #212020 !important;
+  color: #f5f5f5 !important;
+}
+body.modo-oscuro .contacto-h2,
+body.modo-oscuro .input-group,
+body.modo-oscuro .contacto{
+  background-color: #3a3a3a !important;
+  color: #f5f5f5 !important;
+}
+
+body.modo-oscuro .footer,
+body.modo-oscuro .footer-container,
+body.modo-oscuro .footer-info,
+body.modo-oscuro .m-3,
+body.modo-oscuro .footer-social,
+body.modo-oscuro .footer-contact{
+    background-color:#3a3a3a  !important;
+    color: #f5f5f5 !important;
+}
+/* Modo oscuro uniforme en redes y contacto */
+body.modo-oscuro .footer-social p,
+body.modo-oscuro .footer-contact p {
+  background-color:#3a3a3a !important;
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* Quitar fondo marrón heredado del <a> */
+body.modo-oscuro .footer-social a {
+  background-color: transparent !important;
+}
+body.modo-oscuro .menu-2 nav ul.nav-links {
+    border-bottom: 2px solid #333333 !important; 
+}
+
+
+
+
+
+/* --- MODO OSCURO --- */
+body.modo-oscuro .logo,
+body.modo-oscuro .logo strong,
+body.modo-oscuro .logo .span-1 {
+  background: #212020 !important;  
+  color: #fff !important;          
+}
+
+body.modo-oscuro .menu-2 nav,
+body.modo-oscuro .menu-2 .nav-links {
+  background: #212020!important;  
+  color: #fff !important;    
+}
+body.modo-oscuro .menu-2 .nav-links a {
+  color: #fff !important;
+  background-color: #212020 !important;
+}
+
+body.modo-oscuro .menu-2 .nav-links i {
+  color: #fff !important;
+  background: transparent !important;
+}
+
+body.modo-oscuro .label,
+body.modo-oscuro .category-button,
+body.modo-oscuro .nav-links a,
+body.modo-oscuro .dropdown-menu,
+body.modo-oscuro .diet-labels .label,
+body.modo-oscuro .input-group input,
+body.modo-oscuro .input-group textarea,
+body.modo-oscuro .btn-2 {
+    background-color: #333 !important;
+    color: #f1f1f1 !important;
+    border-color: #666 !important;
+}
+
+body.modo-oscuro .dropdown-menu a {
+    color: #fff !important;
+}
+
+body.modo-oscuro .contacto {
+    color: #f1f1f1 !important;
+}
+
+body.modo-oscuro .locations,
+body.modo-oscuro .text-container {
+    background-color: #333 !important;
+    color: #f1f1f1 !important;
+}
+
+body.modo-oscuro .locations address p i,
+body.modo-oscuro .locations p i {
+    color: #f1f1f1 !important;
+    background-color: #333;
+}
+
+
+body.modo-oscuro .category-button,
+body.modo-oscuro .dropdown-menu li a {
+  background-color: #212020 !important;
+  color: white !important;
+  border-color: #555 !important;
+}
+.switch{
+  background-color: #212020 !important;
+}
+
+
+body.modo-oscuro .label {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: #444;
+}
+
+
+body.modo-oscuro .label i {
+  color: #ffffff;
+}
+
+body.modo-oscuro .label img {
+  background-color: transparent !important;
+}
+body.modo-oscuro .label img 
+ {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* /* Fondo oscuro  */
+body.modo-oscuro .menu-2 nav,
+body.modo-oscuro .menu-2 .nav-links,
+body.modo-oscuro .menu-2 ul,
+body.modo-oscuro .menu-2 ul.nav-links,
+body.modo-oscuro .menu-2 li,
+body.modo-oscuro .menu-2 .nav-links li,
+body.modo-oscuro .menu-2 .nav-links a {
+  background: #212020 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
+/* --- MODO OSCURO para ENCUÉNTRANOS --- */
+body.modo-oscuro .locations {
+  background: #232323 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 0 12px 0 #1115 !important;
+}
+
+body.modo-oscuro .locations .text-container {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+body.modo-oscuro .locations h4,
+body.modo-oscuro .locations p,
+body.modo-oscuro .locations address,
+body.modo-oscuro .locations address p,
+body.modo-oscuro .locations i {
+  color: #fff !important;
+}
+
+body.modo-oscuro .locations address,
+body.modo-oscuro .locations p {
+  background: transparent !important;
+  border: none !important;
+}
+/* Fondo oscuro y texto blanco 
+body.modo-oscuro .locations h4 {
+  background: transparent !important;
+ 
+}
+/* Fondo del toggle en modo claro */
+body:not(.modo-oscuro) .switch {
+  background: #f8f5ea !important; 
+  
+
+}
+
+/* Fondo del toggle en modo oscuro */
+body.modo-oscuro .switch {
+  background: #232323 !important;
+  
+}
+
+/* Dropdown oscuro y texto blanco 
+body.modo-oscuro .dropdown-menu {
+  background: #181818 !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
+}
+
+body.modo-oscuro .dropdown-menu li,
+body.modo-oscuro .dropdown-menu li a,
+body.modo-oscuro .dropdown-menu a {
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+
+body.modo-oscuro .dropdown-menu li a:hover,
+body.modo-oscuro .dropdown-menu a:hover {
+  background: #333!important;
+  color: white !important;
+}
+
+/* Para modo claro (opcional): puedes dejarlo así o quitar si ya se ve bien */
+body:not(.modo-oscuro) .dropdown-menu {
+  background: #faf7ee !important; 
+  color: #3e2516 !important;
+}
+body:not(.modo-oscuro) .dropdown-menu li a,
+body:not(.modo-oscuro) .dropdown-menu a {
+  color: #3e2516 !important;
+}
+/* Footer: iconos blancos y sin fondo en modo oscuro */
+body.modo-oscuro .footer i,
+body.modo-oscuro .footer .fa,
+body.modo-oscuro .footer .fa-solid,
+body.modo-oscuro .footer .fa-brands {
+  color: #fff !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+/* Fondo oscuro y texto blanco para los títulos de sucursales en modo oscuro */
+body.modo-oscuro .locations h4 {
+  background: transparent !important; /* O usa #232323 si prefieres que tenga fondo */
+  color: #fff !important;
+}
+
+body.modo-oscuro .offcanvas,body.modo-oscuro .offcanvas-header   {
+  background-color: #1c1c1c;
+}
+body.modo-oscuro .offcanvas-header , body.modo-oscuro .offcanvas, 
+body.modo-oscuro .offcanvas-header, body.modo-oscuro .offcanvas-body {
+  border: none;
+}

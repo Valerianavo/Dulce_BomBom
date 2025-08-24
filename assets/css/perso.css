@@ -1,0 +1,654 @@
+/************************************ Modo Oscuro*******************************/
+ body.modo-oscuro {
+  background-color: #212020 !important;
+  color: #f5f5f5 !important;
+}
+/* Estilos generales */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo modo oscuro */
+body.modo-oscuro {
+  background-color: #212020 !important;
+  color: #f5f5f5 !important;
+}
+
+/* Contenedor centrado */
+.switch-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+/* Estilos del interruptor */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "☀️";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Activado */
+input:checked + .slider {
+  background-color: #666;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  content: "🌙";
+}
+
+body.modo-oscuro {
+  background-color: #1c1c1c !important;
+  color: #f5f5f5 !important;
+}
+
+/* Cambiar encabezados */
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro p,
+body.modo-oscuro a,
+body.modo-oscuro span {
+  color: #f5f5f5 !important;
+}
+
+
+body.modo-oscuro button{
+  border-radius: 20px;
+}
+/* Cambiar fondo de botones */
+body.modo-oscuro button,
+body.modo-oscuro .btn,
+body.modo-oscuro .btnSuscribirse 
+{
+  background-color: #333 !important;
+  color: #fff !important;
+  border: 1px solid #666;
+}
+               
+body.modo-oscuro .buscar{
+  color: #fff !important;
+}            
+
+/* Cambiar navbar, menús y headers */
+body.modo-oscuro .menu-1,
+body.modo-oscuro .menu-2,
+body.modo-oscuro nav,
+body.modo-oscuro header,
+body.modo-oscuro .navbar,
+body.modo-oscuro .dropdown-menu,
+body.modo-oscuro .fa-solid .fa-phone,                        
+body.modo-oscuro .modal-content,
+body.modo-oscuro .opci-saludables,
+body.modo-oscuro .welcome-modal {
+  background-color: #1c1c1c !important;
+  color: #f5f5f5 !important;
+}
+body.modo-oscuro .footer,
+body.modo-oscuro .footer-container,
+body.modo-oscuro .footer-info,
+body.modo-oscuro .m-3,
+body.modo-oscuro .footer-social,
+body.modo-oscuro .footer-contact{
+    background-color:#3a3a3a  !important;
+    color: #f5f5f5 !important;
+}
+
+/* Estilos para etiquetas diet-labels */
+body.modo-oscuro .diet-labels .label{
+  background-color: #1c1c1c;
+  color: #1c1c1c;
+  border: 1px solid #1c1c1c;
+}
+
+/* Tarjetas de productos y antojos */
+body.modo-oscuro .producto,
+body.modo-oscuro .Antojo,
+body.modo-oscuro .Antojo2 
+{
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+/* Enlaces dentro de botones */
+body.modo-oscuro button a {
+  color: #fff !important;
+}
+.btnSuscribirse {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1c1c1c; 
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+body.modo-oscuro .Antojo {
+  background: linear-gradient(to right, #3a3a3a, #4a4a4a) !important;
+  color: #fff !important;
+}
+
+body.modo-oscuro .Antojo2 {
+  background: linear-gradient(to right, #3a3a3a, #4a4a4a) !important;
+  color: #fff !important;
+}
+
+/* Modo oscuro uniforme en redes y contacto */
+body.modo-oscuro .footer-social p,
+body.modo-oscuro .footer-contact p {
+  background-color:#3a3a3a !important;
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Íconos y links también blancos */
+body.modo-oscuro .footer-social i,
+body.modo-oscuro .footer-contact i,
+body.modo-oscuro .footer-social a,
+body.modo-oscuro .footer-contact a {
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Quitar fondo marrón heredado del <a> */
+body.modo-oscuro .footer-social a {
+  background-color: transparent !important;
+}
+
+
+/* Estilo default para modo claro */
+.diet-labels .label {
+  background-color: #f8f4f1;
+  color: #5f5449;
+  cursor: pointer;
+  padding: 0.4em 1em;
+  border-radius: 30px;
+  font-weight: 600;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Estilo para modo oscuro */
+body.modo-oscuro .diet-labels .label {
+  background-color: #2c2c2c; /* negro clarito */
+  color: #ffffff; /* texto blanco */
+}
+
+/* Cambiar el color de los íconos o SVG dentro de las etiquetas */
+body.modo-oscuro .diet-labels .label svg,
+body.modo-oscuro .diet-labels .label i {
+  fill: #ffffff;
+  color: #ffffff;
+}
+
+body.modo-oscuro .diet-labels .label {
+  background-color: #1c1c1c !important; /* negro clarito y forzado */
+  color: #ffffff !important; /* letras blancas forzado */
+  border: none !important; /* elimina borde si existe */
+  box-shadow: none !important; /* elimina sombra si existe */
+}
+
+
+body.modo-oscuro .diet-labels .label {
+  background-color: #3a3a3a  !important; /* fondo negro muy oscuro */
+  color: #ffffff !important; /* texto blanco */
+  opacity: 1 !important; /* quitar cualquier transparencia */
+  background-image: none !important; /* eliminar imágenes de fondo */
+  box-shadow: none !important; /* eliminar sombra */
+  border: none !important; /* eliminar borde */
+}
+body.modo-oscuro .menu-2 nav ul.nav-links {
+    border-bottom: 2px solid #333333 !important; /* negro claro */
+}
+
+
+
+
+/************************************** BOTOOOOOOOOOOOOOOON ************************************/
+
+
+/* Estilo general del footer */
+.footer {
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* MODO OSCURO */
+body.modo-oscuro .footer {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+body.modo-oscuro .footer a {
+  color: white;
+}
+
+
+body.modo-claro .footer {
+  background-color: #f2e4db; 
+  color: #2b2b2b; 
+}
+
+body.modo-claro .footer a {
+  color: #2b2b2b;
+}
+
+
+body.modo-oscuro {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+}
+
+body.modo-oscuro header,
+body.modo-oscuro footer,
+body.modo-oscuro .menu-1,
+body.modo-oscuro .menu-2,
+body.modo-oscuro .Producto {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  border-color: #333;
+}
+
+
+body.modo-oscuro a {
+  color: #bb86fc;
+}
+
+body.modo-oscuro .Producto p {
+  color: #ccc;
+}
+
+body.modo-oscuro input[type="text"] {
+  background-color: #333;
+  color: #eee;
+  border-color: #555;
+}
+
+
+body.modo-oscuro {
+  background-color: #1c1c1c; 
+  color: #eee; 
+}
+
+
+body.modo-oscuro #contenedor-cards {
+  background-color: #1c1c1c;
+}
+
+body.modo-oscuro .Producto {
+  background-color: #1c1c1c;
+  border: 1px solid #1c1c1c; 
+}
+
+
+body.modo-oscuro .Producto a img {
+  border: 2px solid #1c1c1c;
+}
+body.modo-oscuro .Producto p {
+  color: #fff;
+  font-weight: bold;
+}
+
+body.modo-oscuro .dropdown-menu,
+body.modo-oscuro .category-button,
+body.modo-oscuro .fa-bars {
+  background-color: #1c1c1c;} 
+  body.modo-oscuro .dropdown{
+  background-color: #333;
+border: #333;}
+
+body.modo-oscuro .let{
+  background-color: #1c1c1c;
+  color: #e0e0e0;}
+  
+
+   body.modo-oscuro.de,
+  body.modo-oscuro.me-2,
+  body.modo-oscuro.fa-search,
+  body.modo-oscuro.btn .btn-search{
+  background-color: #1c1c1c;
+  color: #e0e0e0;}
+
+
+/* ======== MODO OSCURO ======== */
+body.modo-oscuro {
+  background-color: #1c1c1c;
+  color: #1c1c1c;
+}
+
+body.modo-oscuro .menu-2 .search-bar {
+  background-color: #262626;
+  border: 2px solid #1c1c1c;
+}
+
+body.modo-oscuro .menu-2 .search-bar input {
+  background-color: transparent;
+  color: #1c1c1c;
+}
+
+body.modo-oscuro .menu-2 .search-bar button i {
+  color: #1c1c1c;
+}
+
+body.modo-oscuro .categoria,
+body.modo-oscuro .boton,
+body.modo-oscuro .menu,
+body.modo-oscuro nav {
+  background-color: #1c1c1c;
+  color: #1c1c1c;
+}
+
+body.modo-oscuro img,
+body.modo-oscuro button,
+body.modo-oscuro input {
+  background-color: transparent;
+}
+
+
+body.dark-mode .search-bar button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+body.modo-oscuro .search-bar button i {
+  color:#1a1a1a ; 
+  background-color: transparent;
+  border: none;
+   
+  
+}
+
+body.modo-oscuro .logo {
+  background-color: transparent !important;
+}
+
+
+body.modo-oscuro .logo strong,
+body.modo-oscuro .logo span {
+  color: #ffffff !important;
+}
+
+
+body.modo-oscuro .dropdown {
+  background-color: transparent;
+}
+
+
+body.modo-oscuro .category-button {
+  background-color: #2c2c2c;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 999px; 
+  padding: 10px 20px;
+}
+
+
+body.modo-oscuro,body.modo-oscuro .offcanvas-header   {
+  background-color: #1c1c1c;
+}
+body.modo-oscuro .offcanvas-header , body.modo-oscuro .offcanvas, 
+body.modo-oscuro .offcanvas-header, body.modo-oscuro .offcanvas-body {
+  border: none;
+}
+body.modo-oscuro .catego{
+  background-color: #333;
+border: #333;}
+
+body.modo-oscuro .dropdown,
+body.modo-oscuro .menu-1 {
+  background-color: transparent;
+}
+/* 🌙 Modo Oscuro */
+body.modo-oscuro {
+  background-color: #1c1c1c; 
+  color: #ffffff; 
+}
+
+
+body.modo-oscuro .logo {
+  background-color: transparent;
+}
+
+body.modo-oscuro .logo strong {
+  color: #ffffff;
+}
+
+body.modo-oscuro .logo .span-1 {
+  color: #ffffff;
+}
+
+
+body.modo-oscuro .category-button {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid #444; 
+}
+
+body.modo-oscuro .category-button:hover {
+  background-color: #3a3a3a;
+}
+
+
+body.modo-oscuro .dropdown-menu {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+body.modo-oscuro .dropdown-menu a {
+  color: #ffffff;
+}
+
+
+body.modo-oscuro .switch {
+  background-color: transparent;
+}
+
+body.modo-oscuro .slider {
+  background-color: #444;
+}
+
+body.modo-oscuro .slider:before {
+  background-color: #fff;
+}
+body.modo-oscuro.span-1{
+  background-color: #1c1c1c; 
+  color: #ffffff; 
+}
+
+body.modo-oscuro div.dropdown ul.dropdown-menu {
+  background-color: #1c1c1c !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+}
+body.modo-oscuro .dropdown-menu {
+  background-color: #1c1c1c !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+}
+
+body.modo-oscuro .dropdown-menu li a {
+  color: #ffffff !important;
+}
+body.modo-oscuro {
+  background-color: #1c1c1c;
+  color: #eee;
+}
+
+body.modo-oscuro header {
+  background-color: #1c1c1c;
+  color: #eee;
+}
+
+body.modo-oscuro .p1,
+body.modo-oscuro .pproducto,
+body.modo-oscuro .personalizables,
+body.modo-oscuro .fa-solid,
+body.modo-oscuro .fa-seedling,
+body.modo-oscuro .ptit {
+  background-color: #1c1c1c;
+  color: #eee;
+}
+body.modo-oscuro .let,
+body.modo-oscuro .Producto,
+body.modo-oscuro .Tradicionales{
+  background-color: #1c1c1c;
+  color: #eee;
+  border: none;
+}
+
+body.modo-oscuro .dropdown-menu li a:hover {
+  background-color: #333; 
+  color: #fff;
+}
+body.modo-oscuro nav ul,
+body.modo-oscuro nav ul li,
+body.modo-oscuro .nav-links,
+body.modo-oscuro .navbar-nav,
+body.modo-oscuro .menu-2,
+body.modo-oscuro .navbar-nav .nav-link,
+body.modo-oscuro .offcanvas-body,
+body.modo-oscuro .dropdown-menu {
+    background-color: #1c1c1c !important;
+    color: #f5f5f5 !important;
+    border: none !important;
+}
+
+
+body.modo-oscuro .menu-2 {
+  background-color: #1c1c1c !important;
+  color: #f5f5f5 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+body.modo-oscuro .menu-2 a {
+  background-color: transparent !important;
+  color: #f5f5f5 !important;
+  border: none !important;
+}
+
+body.modo-oscuro .menu-2 li {
+  background-color: transparent !important;
+}
+
+body.modo-oscuro .menu-2 a {
+  background-color: transparent !important; 
+  color: #f5f5f5 !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 8px; 
+  display: flex;
+  align-items: center;
+  gap: 6px; 
+}
+
+body.modo-oscuro .menu-2 a i {
+  background-color: transparent !important; 
+  color: #f5f5f5 !important;
+  box-shadow: none !important;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem; 
+}
+
+
+body.modo-oscuro .dropdown-menu {
+  background: #181818 !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
+}
+body.modo-oscuro .dropdown-menu li,
+body.modo-oscuro .dropdown-menu li a,
+body.modo-oscuro .dropdown-menu a {
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+body.modo-oscuro .dropdown-menu li a:hover,
+body.modo-oscuro .dropdown-menu a:hover {
+  background: #333!important;
+  color: white !important;
+}
+
+
+body:not(.modo-oscuro) .dropdown-menu {
+  background: #faf7ee !important; 
+  color: #3e2516 !important;
+}
+body:not(.modo-oscuro) .dropdown-menu li a,
+body:not(.modo-oscuro) .dropdown-menu a {
+  color: #3e2516 !important;
+}
+
+body.modo-oscuro .footer i,
+body.modo-oscuro .footer .fa,
+body.modo-oscuro .footer .fa-solid,
+body.modo-oscuro .footer .fa-brands {
+  color: #fff !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+body.modo-oscuro .logo,
+body.modo-oscuro .span-1 {
+  background: #1c1c1c !important;   
+  color: #fff !important;           
+}
+body.modo-oscuro .logo strong,
+body.modo-oscuro .logo span,
+body.modo-oscuro .logo {
+  background: #1c1c1c !important;  
+  color: #fff !important;
+}
+
+body.modo-oscuro .navbarr{
+  background-color: #333;
+  color: #f5f5f5;
+}

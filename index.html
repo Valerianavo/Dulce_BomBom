@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce BomBom</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/988110bf96.js" crossorigin="anonymous"></script>
+</head>
+<body style="  background-color: #f7f6ec; ">
+    <div class="contenedor-marquesina">
+        <div class="marquesina-texto" id="marquesina-texto">
+            <span>⭐ ¡Postres veganos, sin gluten y bajos en azúcar!</span>
+            <span>☆ ¡Envíos a todo el país!</span>
+            <span>☆ Registrate y obtené 10% de descuento en tu primera compra ⭐</span>
+        </div>
+    </div>
+    <label class="switch">
+        <input type="checkbox" id="modoToggle" onchange="toggleModoOscuro()">
+        <span class="slider"></span>
+    </label>
+
+    <div id="welcomeModal" class="welcome-modal">
+        <div class="odal-content">
+            <div class="sparkle sparkle-1"></div>
+            <div class="sparkle sparkle-2"></div>
+            <div class="sparkle sparkle-3"></div>
+            <div class="sparkle sparkle-4"></div>
+            
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+                <h2 class="tit"> ¡Bienvenido a Dulce BomBom! </h2>
+            </div>
+            
+            <div class="modal-body">
+                <div class="offer-title">¡Únete a nuestra familia!</div>
+                <div class="offer-subtitle">Recibe beneficios exclusivos en tu correo</div>
+                
+                <div class="discount-badge">Exclusivoooo</div>
+                
+                <div class="offer-icons float-animation">
+                    <div class="offer-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="offer-icon"><i class="fas fa-birthday-cake"></i></div>
+                    <div class="offer-icon"><i class="fas fa-heart"></i></div>
+                </div>
+                
+                <div class="offer-details">
+                    <div class="offer-description">
+                        Suscríbete y recibe <strong>descuentos exclusivos</strong> y<br>
+                        noticias sobre nuestros postres antes que nadie.<br>
+                        ¡Sé parte de nuestra comunidad dulce!
+                    </div>
+                </div>
+                
+                <div class="modal-buttons">
+                    <a href="contact.html" target="_blank" class="btnSuscribirse">
+                        Quiero suscribirme
+                    </a>
+                    <button class="btn-later" onclick="closeModal()">
+                        Tal vez después
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        
+        <div class="menu-1">
+            <div class="logo">
+                <img src="assets/img/icon.png" alt="Logo Dulce BomBom">
+                <strong><span class="span-1">Dulce</span><span>BomBomm</span></strong>
+            </div>
+            <div class="dropdown">
+                <button class="category-button">
+                    <i class="fas fa-bars"></i> NUESTRAS CATEGORÍAS
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="html/tradicionales/tradicionales.html">Tradicionales</a></li>
+                    <li><a href="html/opci-saludables/opciones saludables.html">Opciones Saludables</a></li>
+                    <li><a href="html/edi-especiales/ediciones especiales.html">Ediciones Especiales</a></li>
+                    <li><a href="html/personalizables/personalizables.html">Personalizables</a></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="menu-2">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="about-us.html"><i class="fas fa-users"></i> Nosotros</a></li>
+                    <li><a href="promotions.html"><i class="fas fa-gift"></i> Promociones</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="diet-labels">
+                <span class="label"><i class="fas fa-seedling"></i> Vegano</span>
+                <span class="label"><i class="fas fa-wheat-awn"></i> Sin gluten</span>
+                <span class="label"><i class="fas fa-tint-slash"></i> Sin lactosa</span>
+                <span class="label"><i class="fas fa-cube"></i> Bajo en azúcar</span>
+            </div>
+            
+        </div>
+
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="logo">
+                    <img src="assets/img/icon.png" alt="Logo Dulce BomBom">
+                    <strong><span class="span-1">Dulce</span><span>BomBom</span></strong>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <strong><h2 class="span-1">Dulce BomBom</h2></strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="about-us.html"><i class="fas fa-users"></i> Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="promotions.html"><i class="fas fa-gift"></i> Promociones</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">NUESTRAS CATEGORÍAS</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="html/tradicionales/tradicionales.html">Tradicionales</a></li>
+                                    <li><a href="html/opci-saludables/opciones saludables.html">Opciones Saludables</a></li>
+                                    <li><a href="html/edi-especiales/ediciones especiales.html">Ediciones Especiales</a></li>
+                                    <li><a href="html/personalizables/personalizables.html">Personalizables</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <div class="banner">
+        <div class="capa"></div>
+        <div class="info">
+            <h1>¡Postres para todos!</h1>
+            <p>Elaboramos postres con insumos finamente seleccionados  de diversas partes de nuestro país, pensando siempre en el valor nutricional, ¡Porque darte un gusto también puede ser saludable!</p>
+            <a href="html/opci-saludables/opciones saludables.html" class="opci-saludables">Opciones Saludables</a>
+        </div>
+    </div>
+    <!-- Debajo del banner -->
+    <section class="productos">
+    <h1>Hay más delicias esperando por ti...</h1>
+    <div class="producto" data-precio="S/5.00 a S/40.00">
+        <a href="html/opci-saludables/o-flan de coco.html">
+            <img src="assets/img/Opciones Saludables/Flan-de-Coco-.png" alt="">
+        </a>
+        <p>Flan de Coco</p>
+    </div>
+    <div class="producto" data-precio="S/5.00 a S/60.00">
+        <a href="html/opci-saludables/o-Bizcocho.html">
+            <img src="assets/img/Opciones Saludables/Bizcochode almendras.jpg" alt="">
+        </a>
+        <p>Bizcocho de Almendra</p>
+    </div>
+    <div class="producto" data-precio="S/4.00 a S/50.00">
+        <a href="html/tradicionales/t-Keke de zanahoria.html">
+            <img src="assets/img/Tradicionales/quequeveganoz7edit.jpg" alt="">
+        </a>
+        <p>Keke de Zanahoria</p>
+    </div>
+    <div class="producto" data-precio="S/3.00 a S/40.00">
+        <a href="html/tradicionales/t-Piono de vainilla.html">
+            <img src="assets/img/Tradicionales/Pionono de vainilla.jpg" alt="">
+        </a>
+        <p>Pionono de Vainilla</p>
+    </div>
+</section>
+
+    <!-- Antojos del mes -->
+    <section class="Antojos-container">
+        <h1>Antojos del mes</h1>
+        <div class="Antojos">
+            <div class="Antojo">
+                <h2>Cheesecake vegano</h2>
+                <p>Cremoso, delicioso y 100% libre de ingredientes animales. ¡Perfecto para todos!</p>
+                <button><a href="html/opci-saludables/opciones saludables.html">Ver opciones saludables</a></button> 
+            </div>
+            <div class="Antojo2">
+                <h2>Chocopastel</h2>
+                <p>¡Descubre de nuestro encantadora chocopastel! Increiblemente delicioso lleno de chocolate por todos lados.</p>
+                <button><a href="html/tradicionales/tradicionales.html">Ver tradicionales</a></button>
+            </div>  
+        </div>
+        
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p class="m-3">
+                    Nuestras tortas y postres son elaboradas bajo estrictas normas sanitarias 
+                    y con insumos calificados que permiten otorgarle a nuestro cliente lo mejor.
+                </p>
+            </div>
+    
+            <!-- Redes Sociales -->
+            <div class="footer-social">
+                <p><i class="fa-brands fa-instagram"></i> 
+                    <a class="text-decoration-none text-white ancor" href="https://instagram.com" target="_blank">Dulcepompom.25</a>
+                </p>
+                <p><i class="fa-brands fa-twitter"></i> 
+                    <a class="text-decoration-none text-white ancor" href="https://twitter.com" target="_blank">PatitasPomPom</a>
+                </p>
+                <p><i class="fa-solid fa-envelope"></i> 
+                    <a class="text-decoration-none text-white ancor" href="https://gmail.com" target="_blank">Dulcepom@gmail.com</a>
+                </p>
+            </div>
+            
+    
+            <!-- Contacto -->
+            <div class="footer-contact">
+                <p><i class="fa-solid fa-truck"></i> Delivery: Lunes a Domingo</p>
+                <p>de 9:00am a 8:00pm</p>
+                <p><i class="fa-solid fa-phone"></i> Central Telefónica: (01) 796 6410</p>
+            </div>
+        </div>
+    </footer>
+
+    </svg></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script  src="assets/js/script.js"></script>
+    <script src="assets/js/productos.js"></script>
+    <script src="assets/js/logo.js"></script>
+    <script src="assets/js/texto.js"></script> 
+    <script src="assets/js/whatsapp.js"></script>
+    <script src="assets/js/ModOscuro.js"></script>
+    <a href="https://wa.me/51987654321" target="_blank" id="whatsapp-button" class="whatsapp-button">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  ¡Escríbenos! 😊
+</a>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce BomBom</title>
+    <link rel="stylesheet" href="assets/css/about-us.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/988110bf96.js" crossorigin="anonymous"></script>
+    
+</head>
+<body style="  background-color: #f7f6ec; ">
+    <div class="contenedor-marquesina">
+        <div class="marquesina-texto" id="marquesina-texto">
+            <span>⭐ ¡Postres veganos, sin gluten y bajos en azúcar!</span>
+            <span>☆ ¡Envíos a todo el país!</span>
+            <span>☆ Registrate y obtené 10% de descuento en tu primera compra ⭐</span>
+        </div>
+    </div>
+    <label class="switch">
+        <input type="checkbox" id="modoToggle" onchange="toggleModoOscuro()">
+        <span class="slider"></span>
+    </label>
+
+    <header>
+        
+        <div class="menu-1">
+            <div class="logo">
+                <img src="assets/img/icon.png" alt="Logo Dulce BomBom">
+                <strong><span class="span-1">Dulce</span><span>BomBom</span></strong>
+            </div>
+            <div class="dropdown">
+                <button class="category-button">
+                    <i class="fas fa-bars"></i> NUESTRAS CATEGORÍAS
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="html/tradicionales/tradicionales.html" class="tra">Tradicionales</a></li>
+                    <li><a href="html/opci-saludables/opciones saludables.html" class="tra">Opciones Saludables</a></li>
+                    <li><a href="html/edi-especiales/ediciones especiales.html" class="tra">Ediciones Especiales</a></li>
+                    <li><a href="html/personalizables/personalizables.html"class="tra">Personalizables</a></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="menu-2">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="about-us.html"><i class="fas fa-users"></i> Nosotros</a></li>
+                    <li><a href="promotions.html"><i class="fas fa-gift"></i> Promociones</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="diet-labels">
+                <span class="label"><i class="fas fa-seedling"></i> Vegano</span>
+                <span class="label"><i class="fas fa-wheat-awn"></i> Sin gluten</span>
+                <span class="label"><i class="fas fa-tint-slash"></i> Sin lactosa</span>
+                <span class="label"><i class="fas fa-cube"></i> Bajo en azúcar</span>
+            </div>
+            
+        </div>
+
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="logo">
+                    <img src="assets/img/icon.png" alt="Logo Dulce BomBom">
+                    <strong class="span-1"><span class="span-1">Dulce</span><span class="span-1" >BomBom</span></strong>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <strong><h2 class="span-1">Dulce BomBom</h2></strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="about-us.html"><i class="fas fa-users"></i> Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="promotions.html"><i class="fas fa-gift"></i> Promociones</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">NUESTRAS CATEGORÍAS</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="html/tradicionales/tradicionales.html">Tradicionales</a></li>
+                                    <li><a href="html/opci-saludables/opciones saludables.html">Opciones Saludables</a></li>
+                                    <li><a href="html/edi-especiales/ediciones especiales.html">Ediciones Especiales</a></li>
+                                    <li><a href="html/personalizables/personalizables.html">Personalizables</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <strong><h2 class="val">Creando dulzura para todos</h2></strong>
+        <h5 class="mt-5">Somos una empresa con el sueño de crear postres que todos puedan disfrutar.</h5>
+        <div class="cards">
+            <div class="card1">
+                <img class="card-img" src="assets/img/nosotros/perrito.jpg" alt="">
+                <strong><h6 class="val" >Nuestra Mision</h6></strong>
+                <p class="val">Ayudar a los animales rescatados, ofreciendo apoyo a través de cada postre que preparamos, con la esperanza de mejorar sus vidas.</p>
+            </div>
+            <div class="card2">
+                <img class="card-img" src="assets/img/nosotros/inclusivo.png" alt="">
+                <strong><h6 class="val">Nuestra Vision</h6></strong>
+                <p class="val">Lograr que nuestros postres lleguen a todos, sin importar sus restricciones alimenticias, y que cada bocado sea accesible para todos.</p>
+            </div>
+            <div class="card3">
+                <img class="card-img" src="assets/img/nosotros/perro feliz.jpg" alt="">
+                <strong><h6 class="val">¿Qué buscamos como empresa?</h6></strong>
+                <p class="val">Buscamos crear una comunidad que valore la calidad, la inclusión y el impacto positivo, tanto en la mesa como en el corazón.</p>
+            </div>
+        </div>
+        <h3 class="mt-5">Conoce a nuestro personal</h3>
+        <div class="our-team">
+            <p class="mt-5">
+                “En DulceBomBom, preparamos <strong class="mt-5">postres deliciosos para todos</strong>, con opciones sin gluten y lactosa.
+                Además, con cada postre, apoyamos a fundaciones de animales rescatados, porque creemos que el
+                cambio comienza con pequeños gestos.”<br> 
+                <strong class="mt-5">Diego Gutiérrez<br>
+                Líder del equipo de pasteleros</strong>
+            </p>
+            <img src="assets/img/nosotros/our-team.png" alt="">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p class="m-3">
+                    Nuestras tortas y postres son elaboradas bajo estrictas normas sanitarias 
+                    y con insumos calificados que permiten otorgarle a nuestro cliente lo mejor.
+                </p>
+            </div>
+    
+            <!-- Redes Sociales -->
+            <div class="footer-social">
+                <p><i class="fa-brands fa-instagram"></i> 
+                    <a class="text-decoration-none text-white ancor" href="https://instagram.com" target="_blank">Dulcepompom.25</a>
+                </p>
+                <p><i class="fa-brands fa-twitter"></i> 
+                    <a class="text-decoration-none text-white ancor" href="https://twitter.com" target="_blank">PatitasPomPom</a>
+                </p>
+                <p><i class="fa-solid fa-envelope"></i> 
+                    <a class="text-decoration-none text-white ancor" href="https://gmail.com" target="_blank">Dulcepom@gmail.com</a>
+                </p>
+            </div>
+            
+    
+            <!-- Contacto -->
+            <div class="footer-contact">
+                <p><i class="fa-solid fa-truck"></i> Delivery: Lunes a Domingo</p>
+                <p>de 9:00am a 8:00pm</p>
+                <p><i class="fa-solid fa-phone"></i> Central Telefónica: (01) 796 6410</p>
+            </div>
+        </div>
+    </footer>    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/logo.js"></script>
+    <script src="assets/js/texto.js"></script>
+    <script src="assets/js/whatsapp.js"></script> 
+    <script src="assets/js/ModOscuro.js"></script>
+
+ 
+</body>
+</html>
