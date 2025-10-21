@@ -19,70 +19,75 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// 
-document.querySelectorAll('.Producto').forEach(producto => {
-    producto.style.position = 'relative';
-    producto.style.overflow = 'hidden';
-    producto.style.display = 'inline-block';
-    producto.style.borderRadius = '10px';
+// EFECTOS PRODUCTOS 
+document.addEventListener("mouseover", function (e) {
+  // Detectamos si el cursor está sobre una card de producto
+  const producto = e.target.closest(".Producto");
+  if (!producto) return;
 
-    const img = producto.querySelector('img');
-    img.style.transition = 'transform 0.3s ease';
-    img.style.borderRadius = '10px';
+  const img = producto.querySelector("img");
+  if (!img) return;
 
-    producto.addEventListener('mouseenter', () => {
-        // Efecto de zoom en la imagen
-        img.style.transform = 'scale(1.05)';
+  // Configuramos estilo base del contenedor
+  producto.style.position = "relative";
+  producto.style.overflow = "visible"; // Permitimos que la imagen se agrande sin cortar
+  img.style.transition = "transform 0.3s ease";
 
-        // Crear overlay
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay'); // ← Ahora tiene clase
-        overlay.textContent = producto.dataset.precio;
-        overlay.style.position = 'absolute';
-        overlay.style.top = '28px';
-        overlay.style.left = '0';
-        overlay.style.width = '100%';
-        overlay.style.height = '77%';
-        overlay.style.background = 'rgba(160, 90, 70, 0.8)';
-        overlay.style.color = '#fff';
-        overlay.style.fontSize = '18px';
-        overlay.style.fontWeight = 'bold';
-        overlay.style.display = 'flex';
-        overlay.style.alignItems = 'center';
-        overlay.style.justifyContent = 'center';
-        overlay.style.borderRadius = '10px';
-        overlay.style.opacity = '0';
-        overlay.style.transition = 'opacity 0.3s ease';
-        overlay.style.cursor = 'pointer'; // Para indicar que es clicable
+  // Evitar duplicar overlays si se pasa el mouse varias veces
+  if (producto.querySelector(".overlay")) return;
 
-        // Evento click para redirigir
-        overlay.addEventListener('click', () => {
-            const link = producto.querySelector('a');
-            if (link) {
-                window.location.href = link.getAttribute('href');
-            }
-        });
+  // Efecto de para que se achique la imagen
+  img.style.transform = "scale(0.95)";
 
-        // Guardar ID para eliminarlo después
-        producto.dataset.overlayId = Math.random().toString(36).substr(2, 9);
-        overlay.id = producto.dataset.overlayId;
+  // Crear overlay 
+  const overlay = document.createElement("div");
+  overlay.classList.add("overlay");
 
-        producto.appendChild(overlay);
+  // Mostrar el precio o texto por defecto
+  overlay.textContent = producto.dataset.precio || "Precio no disponible";
 
-        // Mostrar overlay después de añadirlo
-        requestAnimationFrame(() => {
-            overlay.style.opacity = '1';
-        });
-    });
+  // --- Estilos del overlay ---
+  overlay.style.position = "absolute";
+  overlay.style.top = img.offsetTop + "px"; 
+  overlay.style.left = img.offsetLeft + "px";
+  overlay.style.width = img.offsetWidth + "px";
+  overlay.style.height = img.offsetHeight + "px";
+  overlay.style.background = "rgba(160, 89, 70, 0.5)";
+  overlay.style.color = "#fff";
+  overlay.style.fontSize = "18px";
+  overlay.style.fontWeight = "bold";
+  overlay.style.display = "flex";
+  overlay.style.alignItems = "center";
+  overlay.style.justifyContent = "center";
+  overlay.style.borderRadius = "15px";
+  overlay.style.opacity = "0";
+  overlay.style.transition = "opacity 0.3s ease";
+  overlay.style.cursor = "pointer";
+  overlay.style.pointerEvents = "auto"; // permite hacer clic
+  overlay.style.zIndex = "10"; // asegurar que quede encima de la imagen
 
-    producto.addEventListener('mouseleave', () => {
-        img.style.transform = 'scale(1)';
-        
-        // Eliminar overlay
-        const overlay = document.getElementById(producto.dataset.overlayId);
-        if (overlay) {
-            overlay.style.opacity = '0';
-            setTimeout(() => overlay.remove(), 300);
-        }
-    });
+  // Al hacer clic en el overlay, ir al detalle del producto
+  overlay.addEventListener("click", () => {
+    const link = producto.querySelector("a");
+    if (link) window.location.href = link.href;
+  });
+
+  // Agregar el overlay dentro del contenedor del producto
+  producto.appendChild(overlay);
+
+  //  Animar la aparición suave
+  requestAnimationFrame(() => {
+    overlay.style.opacity = "1";
+  });
+
+  // Cuando el mouse sale, quitar el efecto
+  producto.addEventListener(
+    "mouseleave",
+    () => {
+      img.style.transform = "scale(1)";
+      overlay.style.opacity = "0";
+      setTimeout(() => overlay.remove(), 300);
+    },
+    { once: true }
+  );
 });

@@ -1,74 +1,58 @@
-document.querySelectorAll('.producto').forEach(producto => {
-    producto.style.position = 'relative';
-    producto.style.overflow = 'hidden';
-    producto.style.display = 'inline-block';
-    producto.style.borderRadius = '10px';
-
+document.addEventListener('mouseover', function(e) {
+    const producto = e.target.closest('.producto');
+    if (!producto) return;
     const img = producto.querySelector('img');
+    if (!img) return;
+
+    producto.style.position = 'relative';
+    producto.style.overflow = 'visible';
     img.style.transition = 'transform 0.3s ease';
-    img.style.borderRadius = '10px';
 
-    producto.addEventListener('mouseenter', () => {
-        // Efecto de zoom en la imagen
-        img.style.transform = 'scale(1.05)';
+    if (producto.querySelector('.overlay')) return;
 
-        // Crear overlay
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay'); //
-        overlay.textContent = producto.dataset.precio;
-        
-        overlay.style.position = 'absolute';
-        overlay.style.top = '0';
-        overlay.style.left = '0';
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.background = 'rgba(160, 90, 70, 0.8)';
-        overlay.style.color = '#fff';
-        overlay.style.fontSize = '18px';
-        overlay.style.fontWeight = 'bold';
-        overlay.style.display = 'flex';
-        overlay.style.alignItems = 'center';
-        overlay.style.justifyContent = 'center';
-        overlay.style.borderRadius = '10px';
-        overlay.style.opacity = '0';
-        overlay.style.transition = 'opacity 0.3s ease';
-        overlay.style.cursor = 'pointer'; 
+    img.style.transform = 'scale(0.95)';
 
-        // Evento click para redirigir
-        overlay.addEventListener('click', () => {
-            const link = producto.querySelector('a');
-            if (link) {
-                window.location.href = link.getAttribute('href');
-            }
-        });
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    overlay.textContent = producto.dataset.precio || 'Precio no disponible';
+    overlay.style.position = 'absolute';
+    overlay.style.top = img.offsetTop + 'px';
+    overlay.style.left = img.offsetLeft + 'px';
+    overlay.style.width = img.offsetWidth + 'px';
+    overlay.style.height = img.offsetHeight + 'px';
+    overlay.style.background = 'rgba(160, 89, 70, 0.5)';
+    overlay.style.color = '#fff';
+    overlay.style.fontSize = '18px';
+    overlay.style.fontWeight = 'bold';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.borderRadius = '15px';
+    overlay.style.opacity = '0';
+    overlay.style.transition = 'opacity 0.3s ease';
+    overlay.style.cursor = 'pointer';
+    overlay.style.pointerEvents = 'auto';
+    overlay.style.zIndex = '10';
 
-        // Guardar ID para eliminarlo después
-        producto.dataset.overlayId = Math.random().toString(36).substr(2, 9);
-        overlay.id = producto.dataset.overlayId;
-
-        producto.appendChild(overlay);
-
-        // Mostrar overlay después de añadirlo
-        requestAnimationFrame(() => {
-            overlay.style.opacity = '1';
-        });
+    overlay.addEventListener('click', () => {
+        const link = producto.querySelector('a');
+        if (link) window.location.href = link.href;
     });
 
-    
+    producto.appendChild(overlay);
+    requestAnimationFrame(() => {
+        overlay.style.opacity = '1';
+    });
 
-    producto.addEventListener('mouseleave', () => {
+    producto.addEventListener(
+        'mouseleave',
+         () => {
         img.style.transform = 'scale(1)';
-        
-        // Eliminar overlay
-        const overlay = document.getElementById(producto.dataset.overlayId);
-        if (overlay) {
-            overlay.style.opacity = '0';
-            setTimeout(() => overlay.remove(), 300);
-        }
-    });
+        overlay.style.opacity = '0';
+        setTimeout(() => {overlay.remove();}, 300);
+    }, { once: true}
+    );
+
 });
-
-
-
 
 
