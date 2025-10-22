@@ -131,16 +131,20 @@
         
             <article class="contacto">
                 <h2 class="contacto-h2">Contacto</h2>
-                <form  class="contacto-h2"  action="https://formsubmit.co/f3408916@gmail.com" method="POST">
+
+                <form id="form-contacto" class="contacto-h2">
                     <div class="input-group">
-                        <input type="text" name="name" placeholder="Nombre" required>
-                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <input type="text" name="name" id="name" placeholder="Nombre" required>
+                    <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
                     </div>
-                     <div class="input-group">
-                    <input type="text" name="subject" placeholder="Asunto">
-                    <textarea name="message" placeholder="Escribe tu mensaje"></textarea>
+
+                    <div class="input-group">
+                    <input type="text" name="subject" id="subject" placeholder="Asunto">
+                    <textarea name="message" id="message" placeholder="Escribe tu mensaje" required></textarea>
                     <button class="btn-2" type="submit">Enviar</button>
                     </div>
+
+                    <p id="mensaje" style="display:none; margin-top:10px;"></p>
                 </form>
             </article>
         </section>
@@ -235,7 +239,57 @@
             </div>
         </div>
     </footer>
+
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+    const form = document.getElementById("form-contacto");
+    const mensaje = document.getElementById("mensaje");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // Obtener valores
+        const nombre = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const asunto = document.getElementById("subject").value.trim();
+        const mensajeTexto = document.getElementById("message").value.trim();
+
+        // Validaciones básicas
+        if (nombre === "" || email === "" || mensajeTexto === "") {
+        mostrarMensaje("Por favor, completa los campos obligatorios.", "red");
+        return;
+        }
+
+        // Validar correo electrónico con expresión regular
+        const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        if (!emailRegex.test(email)) {
+            setTimeout(() => {
+                mensaje.style.display = "none";
+            }, 3000); // Ocultar mensaje después de 5 segundos
+        mostrarMensaje("Por favor, ingresa un correo electrónico válido.", "orange");
+        form.reset();
+
+        return;
+        }
+
+        // Si todo está correcto:
+        setTimeout(() => {
+            mensaje.style.display = "none";
+        }, 3000); // Ocultar mensaje después de 5 segundos
+        mostrarMensaje("¡Mensaje enviado correctamente con éxito!", "green");
+        form.reset();
+    });
+
+    // Función para mostrar mensajes
+    function mostrarMensaje(texto, color) {
+        mensaje.textContent = texto;
+        mensaje.style.color = color;
+        mensaje.style.display = "block";
+    }
+    </script>
     <script src="assets/js/logo.js"></script>
     <script src="assets/js/texto.js"></script>
      <script src="assets/js/whatsapp.js"></script>
